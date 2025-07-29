@@ -261,3 +261,12 @@
 - Emergency contact directories are accurate and up-to-date.
 - Evidence preservation checklists are downloadable.
 - Victim support protocols are clearly outlined in a dedicated section.
+
+I watched this YouTube video on how to lay out a website instead of using wireframes.
+https://youtu.be/3C_22eBWpjg?si=rlUtl0D1bvMBStH8
+
+I used Copilot to create my User stories. Microsoft designed to create AI images for my website. I was 
+having difficulties finding images.
+
+I found this image on Google images for my initial colour palette. I've gone for green as my main colour.
+https://piktochart.com/wp-content/uploads/2024/03/enchanted-forest-green-color-palette.jpg
