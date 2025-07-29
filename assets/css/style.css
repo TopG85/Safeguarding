@@ -182,6 +182,27 @@ h3 {
     box-shadow: 0 4px 8px var(--shadow-medium);
 }
 
+/* Specific card header colors */
+.card-header.bg-warning {
+    background-color: #FF8C00 !important; /* Orange for "How to Recognize Concerns" */
+    color: #000000 !important; /* Black text */
+}
+
+.card-header.bg-success {
+    background-color: #52B788 !important; /* Green for "How to Respond" */
+    color: #000000 !important; /* Black text */
+}
+
+.card-header.bg-primary {
+    background-color: #7B68EE !important; /* Purple for "Safeguarding Best Practices" */
+    color: #000000 !important; /* Black text */
+}
+
+.card-header.bg-danger {
+    background-color: #DC3545 !important; /* Red for Emergency */
+    color: #FFFFFF !important; /* White text for better contrast on red */
+}
+
 .card-img-top {
     height: 150px;
     object-fit: contain;
@@ -212,7 +233,7 @@ h3 {
 }
 
 .alert-info {
-    background-color: #0000ff;
+    background-color: #000dff;
     color: var(--text-light);
     border-left: 4px solid var(--secondary-dark);
 }
@@ -253,12 +274,12 @@ h3 {
 /* Form improvements */
 .form-label {
     font-weight: 600;
-    color: #ffffff;
+    color: #9932CC;
 }
 
 .form-text {
     font-size: 0.85rem;
-    color: #ffffff;
+    color: #9932CC;
 }
 
 select.form-control {
@@ -330,7 +351,7 @@ select.form-control {
 
 /* Text color improvements */
 .text-primary {
-    color: var(--primary-color) !important;
+    color: #6200ca !important;
 }
 
 .text-success {
