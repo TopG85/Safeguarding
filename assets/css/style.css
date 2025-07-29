@@ -1,59 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Lexend:wght@500&display=swap");
 
-/* CSS Variables for consistent theming - Enchanted Forest Green Palette */
+/* CSS Variables for consistent theming - Limited Color Palette */
 :root {
-  /* Primary Colors - Enchanted Forest Greens */
-  --primary-color: #1B4332;        /* Deep forest green - primary brand color */
-  --primary-light: #2D5A41;        /* Medium forest green - lighter interactions */
-  --primary-dark: #081C15;         /* Very dark forest green - depth and borders */
+  /* Core Color Palette - Green, Orange, Purple, Black */
+  --primary-color: #2D5A41;        /* Darker green - primary brand color */
+  --primary-light: #52B788;        /* Medium green - lighter interactions */
+  --primary-dark: #1B4332;         /* Very dark green - depth and borders */
   
-  /* Secondary Colors - Natural Earth Tones */
-  --secondary-color: #40916C;      /* Rich emerald green - secondary actions */
-  --secondary-light: #52B788;      /* Fresh spring green - hover states */
-  --secondary-dark: #2F3E46;       /* Dark sage - strong contrast */
+  /* Secondary Colors */
+  --secondary-color: #FF8C00;      /* Orange - secondary actions and warnings */
+  --secondary-light: #FFA500;      /* Light orange - hover states */
+  --secondary-dark: #E67E00;       /* Dark orange - strong contrast */
   
-  /* Accent Colors - Forest Highlights */
-  --accent-primary: #74A57F;       /* Soft sage green - highlights and accents */
-  --accent-secondary: #95D5B2;     /* Light mint green - subtle accents */
+  /* Accent Colors */
+  --accent-primary: #7B68EE;       /* Purple - highlights and accents */
+  --accent-secondary: #9370DB;     /* Medium purple - subtle accents */
   
   /* Alert and Status Colors */
-  --success-color: #52B788;        /* Spring green for positive actions */
-  --warning-color: #F77F00;        /* Warm orange warning - natural complement */
-  --danger-color: #B85450;         /* Muted red for emergencies */
-  --info-color: #2F3E46;          /* Dark sage for information */
+  --success-color: #2D5A41;        /* Darker green for positive actions */
+  --warning-color: #FF8C00;        /* Orange for warnings */
+  --danger-color: #000000;         /* Black for emergencies */
+  --info-color: #7B68EE;          /* Purple for information */
   
-  /* Neutral Colors - Natural and Earthy */
+  /* Neutral Colors */
   --white: #FFFFFF;                /* Pure white - backgrounds and text */
-  --light-gray: #F8FAF9;          /* Very light sage - section backgrounds */
-  --medium-gray: #D8E8D8;         /* Light sage gray - borders and dividers */
-  --dark-gray: #52616B;           /* Muted blue-gray - secondary text */
-  --charcoal: #2F3E46;            /* Dark sage charcoal - strong text */
-  --black: #1C2321;               /* Deep forest black - primary text */
+  --light-gray: #F8F9FA;          /* Very light gray - section backgrounds */
+  --medium-gray: #E9ECEF;         /* Light gray - borders and dividers */
+  --dark-gray: #6C757D;           /* Gray - secondary text */
+  --charcoal: #343A40;            /* Dark gray - strong text */
+  --black: #000000;               /* Pure black - primary text */
   
-  /* Text Colors - Natural Contrast */
-  --text-primary: #1C2321;        /* Deep forest text for maximum readability */
-  --text-secondary: #2F3E46;      /* Dark sage for secondary text */
-  --text-muted: #52616B;         /* Muted gray for subtle text */
+  /* Text Colors */
+  --text-primary: #000000;        /* Black text for maximum readability */
+  --text-secondary: #343A40;      /* Dark gray for secondary text */
+  --text-muted: #6C757D;         /* Gray for subtle text */
   --text-light: #FFFFFF;         /* White text on dark backgrounds */
   
-  /* Background Colors - Forest Atmosphere */
+  /* Background Colors */
   --bg-primary: #FFFFFF;          /* White main background */
-  --bg-secondary: #F1F8F4;        /* Very light sage section backgrounds */
-  --bg-tertiary: #FEFFFE;         /* Off-white card backgrounds */
+  --bg-secondary: #F8F9FA;        /* Light gray section backgrounds */
+  --bg-tertiary: #FFFFFF;         /* White card backgrounds */
   
-  /* Interactive Colors - Forest Theme */
-  --link-color: #40916C;          /* Emerald green links */
-  --link-hover: #1B4332;          /* Deep forest link hover */
-  --button-primary: #52B788;      /* Spring green primary buttons */
-  --button-secondary: #40916C;    /* Emerald secondary buttons */
-  --button-outline: #1B4332;      /* Deep forest outline buttons */
+  /* Interactive Colors */
+  --link-color: #2D5A41;          /* Darker green links */
+  --link-hover: #1B4332;          /* Very dark green link hover */
+  --button-primary: #2D5A41;      /* Darker green primary buttons */
+  --button-secondary: #FF8C00;    /* Orange secondary buttons */
+  --button-outline: #7B68EE;      /* Purple outline buttons */
   
-  /* Border and Shadow Colors - Natural Depth */
-  --border-color: #E8F5E8;        /* Very light forest borders */
-  --border-dark: #B7E4C7;         /* Light sage borders */
-  --shadow-light: rgba(27, 67, 50, 0.08);    /* Light forest shadow */
-  --shadow-medium: rgba(27, 67, 50, 0.16);   /* Medium forest shadow */
-  --shadow-dark: rgba(27, 67, 50, 0.24);     /* Dark forest shadow */
+  /* Border and Shadow Colors */
+  --border-color: #E9ECEF;        /* Light gray borders */
+  --border-dark: #DEE2E6;         /* Medium gray borders */
+  --shadow-light: rgba(0, 0, 0, 0.08);    /* Light black shadow */
+  --shadow-medium: rgba(0, 0, 0, 0.16);   /* Medium black shadow */
+  --shadow-dark: rgba(0, 0, 0, 0.24);     /* Dark black shadow */
 }
 
 /* General styles */
@@ -189,8 +189,8 @@ h3 {
 }
 
 .card-header.bg-success {
-    background-color: #52B788 !important; /* Green for "How to Respond" */
-    color: #000000 !important; /* Black text */
+    background-color: #2D5A41 !important; /* Darker green for "How to Respond" */
+    color: #FFFFFF !important; /* White text for better contrast on darker green */
 }
 
 .card-header.bg-primary {
@@ -199,8 +199,8 @@ h3 {
 }
 
 .card-header.bg-danger {
-    background-color: #DC3545 !important; /* Red for Emergency */
-    color: #FFFFFF !important; /* White text for better contrast on red */
+    background-color: #000000 !important; /* Black for Emergency */
+    color: #FFFFFF !important; /* White text for better contrast on black */
 }
 
 .card-img-top {
