@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Lexend:wght@500&display=swap");
+
+/* CSS Variables for consistent theming - Limited Color Palette */
+:root {
+  /* Primary Colors - Basic Color Palette */
+  --primary-color: #008000;        /* Green - primary brand color */
+  --primary-light: #00ff00;        /* Bright green */
+  --primary-dark: #006400;         /* Dark green */
+  
+  /* Secondary Colors */
+  --secondary-color: #0000ff;      /* Blue - secondary actions */
+  --secondary-light: #87ceeb;      /* Light blue */
+  --secondary-dark: #000080;       /* Navy blue */
+  
+  /* Accent Colors */
+  --accent-primary: #ffa500;       /* Orange - highlights and accents */
+  --accent-secondary: #ff8c00;     /* Dark orange */
+  
+  /* Alert and Status Colors */
+  --success-color: #008000;        /* Green for positive actions */
+  --warning-color: #ff0000;        /* Red for warnings */
+  --danger-color: #ff0000;         /* Red for emergencies */
+  --info-color: #0000ff;          /* Blue for information */
+  
+  /* Neutral Colors */
+  --white: #ffffff;                /* Pure white */
+  --light-gray: #f5f5f5;          /* Very light gray */
+  --medium-gray: #cccccc;         /* Medium gray */
+  --dark-gray: #666666;           /* Dark gray */
+  --charcoal: #333333;            /* Dark charcoal */
+  --black: #000000;               /* Pure black */
+  
+  /* Text Colors */
+  --text-primary: #000000;        /* Black text for maximum contrast */
+  --text-secondary: #333333;      /* Dark gray for secondary text */
+  --text-muted: #3a3a3a;         /* Gray for muted text */
+  --text-light: #ffffff;         /* White text on dark backgrounds */
+  
+  /* Background Colors */
+  --bg-primary: #ffffff;          /* White main background */
+  --bg-secondary: #f5f5f5;        /* Light gray section backgrounds */
+  --bg-tertiary: #ffffff;         /* White card backgrounds */
+  
+  /* Interactive Colors */
+  --link-color: #0000ff;          /* Blue links */
+  --link-hover: #000080;          /* Dark blue link hover */
+  --button-primary: #008000;      /* Green primary buttons */
+  --button-secondary: #0000ff;    /* Blue secondary buttons */
+  --button-outline: #008000;      /* Green outline buttons */
+  
+  /* Border and Shadow Colors */
+  --border-color: #cccccc;        /* Gray borders */
+  --border-dark: #666666;         /* Dark gray borders */
+  --shadow-light: rgba(0, 0, 0, 0.1);    /* Light shadow */
+  --shadow-medium: rgba(0, 0, 0, 0.15);  /* Medium shadow */
+  --shadow-dark: rgba(0, 0, 0, 0.25);    /* Dark shadow */
+}
+
+/* General styles */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+  font-family: "Inter", sans-serif;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-family: "Lexend", sans-serif;
+  color: var(--text-light);
+}
+
+h2 {
+  font-family: "Lexend", sans-serif;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-family: "Inter", sans-serif;
+  color: var(--primary-color);
+}
+
+/* Header */
+.hero-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 300px;
+  font-family: "Lexend", sans-serif;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+}
+
+/* Hero Section with Dark Overlay */
+.jumbotron {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center 30% !important; /* Move background image up more */
+}
+
+.jumbotron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  z-index: 1;
+}
+
+.jumbotron h1 {
+  position: relative;
+  z-index: 2; /* Ensure text appears above overlay */
+  margin-bottom: 0.25rem !important; /* Reduce space below h1 */
+  text-align: center !important;
+  width: 100%;
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.jumbotron p.lead {
+  position: relative;
+  z-index: 2; /* Ensure text appears above overlay */
+  margin-top: 0 !important; /* Remove default top margin */
+  text-align: center;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 4px var(--shadow-light);
+    padding: 0.5rem 0; /* Reduce top and bottom padding */
+}
+
+.navbar .container {
+    max-width: 90%; /* Make navbar content narrower */
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-light) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--accent-secondary) !important;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-secondary) !important;
+}
+
+/* Main content */
+
+/* Enhanced card styling for better readability */
+.card {
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow-medium);
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    background-color: var(--bg-secondary);
+    padding: 10px;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Alert styling improvements */
+.alert {
+    border: none;
+    font-size: 0.9rem;
+    border-radius: 8px;
+}
+
+.alert-info {
+    background-color: #0000ff;
+    color: var(--text-light);
+    border-left: 4px solid var(--secondary-dark);
+}
+
+.alert-warning {
+    background-color: #ff0000;
+    color: var(--text-light);
+    border-left: 4px solid var(--warning-color);
+}
+
+.alert-success {
+    background-color: #008000;
+    color: var(--text-light);
+    border-left: 4px solid var(--success-color);
+}
+
+/* List styling improvements */
+.list-group-item {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Emergency contact card styling */
+.bg-danger .card-title {
+    color: var(--text-light);
+    border-bottom-color: rgba(255,255,255,0.3);
+}
+
+/* Quick guide section styling */
+.bg-light {
+    border: 1px solid #e9ecef;
+}
+
+.fa-2x {
+    margin-bottom: 0.5rem;
+}
+
+/* Form improvements */
+.form-label {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.form-text {
+    font-size: 0.85rem;
+    color: #ffffff;
+}
+
+select.form-control {
+    padding: 0.375rem 0.75rem;
+}
+
+.slider {
+  position: relative;
+}
+
+.main_img {
+  width: 100%;
+  height: 600px;
+}
+
+.main-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  font-size: 100px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+/* Navbar */
+
+.logo {
+    background-color: transparent;
+}
+
+.logo {
+    width: 30px;
+    max-height: 30px;
+    text-align: left;
+}
+
+/* Services */
+.card-body {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Emergency contact card styling */
+.bg-danger {
+    background-color: var(--danger-color) !important;
+}
+
+.bg-danger .card-title {
+    color: var(--text-light);
+    border-bottom-color: rgba(255,255,255,0.3);
+}
+
+.bg-danger .card-body {
+    background-color: var(--danger-color) !important;
+}
+
+/* Quick guide section styling */
+.bg-light {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+}
+
+.fa-2x {
+    margin-bottom: 0.5rem;
+}
+
+/* Text color improvements */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-success {
+    color: var(--success-color) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-white {
+    color: var(--text-light) !important;
+}
+
+/* Footer / contact */
+#contact {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding-bottom: 3rem;
+}
+
+#contact h2,
+#contact h3 {
+    color: var(--text-light);
+}
+
+#contact h5 {
+    color: var(--accent-secondary);
+}
+
+#contact .sub-heading-color {
+    color: var(--accent-secondary);
+}
+
+#contact i {
+    color: var(--accent-secondary);
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+#contact .social-links i {
+    color: var(--text-light);
+    font-size: 1.9rem;
+    transition: color 0.3s ease-in-out;
+}
+
+#contact .social-links i:hover {
+    color: var(--accent-secondary);
+}
+
+#contact .table-dark * {
+    background-color: transparent;
+}
+
+#contact .form-label {
+    color: var(--text-light);
+}
+
+#contact .form-text {
+    color: var(--accent-secondary);
+}
+
+#contact .table-dark * {
+    background-color: transparent;
+}
+
+/* Form improvements */
+.form-label {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(93, 138, 114, 0.25);
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: var(--danger-color);
+}
+
+.form-control.is-valid,
+.form-select.is-valid {
+    border-color: var(--success-color);
+}
+
+/* Button improvements */
+.custom-button-outline {
+    border: 3px solid var(--accent-primary);
+    padding: 12px 30px;
+    color: var(--text-primary);
+    background-color: var(--accent-primary);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    min-width: 120px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+.custom-button-outline:hover {
+    background-color: var(--white); /* White background on hover */
+    border-color: var(--accent-primary); /* Keep yellow border */
+    color: var(--text-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--shadow-medium);
+}
+
+.custom-button-outline:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* grid visualisation CSS for testing */
+
+/* .container,
+.row {
+    border: 2px solid black;
+}
+
+.col-12 {
+    border: 2px solid white;
+    background-color: lightgray;
+} */
+
+/* Media queries */
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  /* Make all service cards the same height for consistency */
+  #services .card-body {
+    min-height: 191px;
+  }
+}
+
+/* Large devices (small laptops, 992px and up) */
+@media screen and (min-width: 992px) {
+  /* Make all service cards the same height for consistency */
+  #services .card-body {
+    min-height: auto;
+  }
+}
+
+/* xl devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+  /* make all service cards the same height for consistency */
+  #services .card-body {
+    min-height: 220px;
+  }
+}
+
+/* xxl devices (larger desktops, 1400px and up) */
+@media screen and (min-width: 1400px) {
+  /* make all service cards the same height for consistency */
+  #services .card-body {
+    min-height: 195px;
+  }
+}
