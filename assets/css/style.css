@@ -3,9 +3,9 @@
 /* CSS Variables for consistent theming - Limited Color Palette */
 :root {
   /* Primary Colors - Basic Color Palette */
-  --primary-color: #008000;        /* Green - primary brand color */
-  --primary-light: #00ff00;        /* Bright green */
-  --primary-dark: #006400;         /* Dark green */
+  --primary-color: #005500;        /* Green - primary brand color */
+  --primary-light: #00d800;        /* Bright green */
+  --primary-dark: #005e00;         /* Dark green */
   
   /* Secondary Colors */
   --secondary-color: #0000ff;      /* Blue - secondary actions */
@@ -194,7 +194,7 @@ h3 {
 }
 
 .card-title {
-    color: var(--primary-color);
+    color: black;
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
