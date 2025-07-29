@@ -1,59 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Lexend:wght@500&display=swap");
 
-/* CSS Variables for consistent theming - Limited Color Palette */
+/* CSS Variables for consistent theming - Enchanted Forest Green Palette */
 :root {
-  /* Primary Colors - Basic Color Palette */
-  --primary-color: #005500;        /* Green - primary brand color */
-  --primary-light: #00d800;        /* Bright green */
-  --primary-dark: #005e00;         /* Dark green */
+  /* Primary Colors - Enchanted Forest Greens */
+  --primary-color: #1B4332;        /* Deep forest green - primary brand color */
+  --primary-light: #2D5A41;        /* Medium forest green - lighter interactions */
+  --primary-dark: #081C15;         /* Very dark forest green - depth and borders */
   
-  /* Secondary Colors */
-  --secondary-color: #0000ff;      /* Blue - secondary actions */
-  --secondary-light: #87ceeb;      /* Light blue */
-  --secondary-dark: #000080;       /* Navy blue */
+  /* Secondary Colors - Natural Earth Tones */
+  --secondary-color: #40916C;      /* Rich emerald green - secondary actions */
+  --secondary-light: #52B788;      /* Fresh spring green - hover states */
+  --secondary-dark: #2F3E46;       /* Dark sage - strong contrast */
   
-  /* Accent Colors */
-  --accent-primary: #ffa500;       /* Orange - highlights and accents */
-  --accent-secondary: #ff8c00;     /* Dark orange */
+  /* Accent Colors - Forest Highlights */
+  --accent-primary: #74A57F;       /* Soft sage green - highlights and accents */
+  --accent-secondary: #95D5B2;     /* Light mint green - subtle accents */
   
   /* Alert and Status Colors */
-  --success-color: #008000;        /* Green for positive actions */
-  --warning-color: #ff0000;        /* Red for warnings */
-  --danger-color: #ff0000;         /* Red for emergencies */
-  --info-color: #0000ff;          /* Blue for information */
+  --success-color: #52B788;        /* Spring green for positive actions */
+  --warning-color: #F77F00;        /* Warm orange warning - natural complement */
+  --danger-color: #B85450;         /* Muted red for emergencies */
+  --info-color: #2F3E46;          /* Dark sage for information */
   
-  /* Neutral Colors */
-  --white: #ffffff;                /* Pure white */
-  --light-gray: #f5f5f5;          /* Very light gray */
-  --medium-gray: #cccccc;         /* Medium gray */
-  --dark-gray: #666666;           /* Dark gray */
-  --charcoal: #333333;            /* Dark charcoal */
-  --black: #000000;               /* Pure black */
+  /* Neutral Colors - Natural and Earthy */
+  --white: #FFFFFF;                /* Pure white - backgrounds and text */
+  --light-gray: #F8FAF9;          /* Very light sage - section backgrounds */
+  --medium-gray: #D8E8D8;         /* Light sage gray - borders and dividers */
+  --dark-gray: #52616B;           /* Muted blue-gray - secondary text */
+  --charcoal: #2F3E46;            /* Dark sage charcoal - strong text */
+  --black: #1C2321;               /* Deep forest black - primary text */
   
-  /* Text Colors */
-  --text-primary: #000000;        /* Black text for maximum contrast */
-  --text-secondary: #333333;      /* Dark gray for secondary text */
-  --text-muted: #3a3a3a;         /* Gray for muted text */
-  --text-light: #ffffff;         /* White text on dark backgrounds */
+  /* Text Colors - Natural Contrast */
+  --text-primary: #1C2321;        /* Deep forest text for maximum readability */
+  --text-secondary: #2F3E46;      /* Dark sage for secondary text */
+  --text-muted: #52616B;         /* Muted gray for subtle text */
+  --text-light: #FFFFFF;         /* White text on dark backgrounds */
   
-  /* Background Colors */
-  --bg-primary: #ffffff;          /* White main background */
-  --bg-secondary: #f5f5f5;        /* Light gray section backgrounds */
-  --bg-tertiary: #ffffff;         /* White card backgrounds */
+  /* Background Colors - Forest Atmosphere */
+  --bg-primary: #FFFFFF;          /* White main background */
+  --bg-secondary: #F1F8F4;        /* Very light sage section backgrounds */
+  --bg-tertiary: #FEFFFE;         /* Off-white card backgrounds */
   
-  /* Interactive Colors */
-  --link-color: #0000ff;          /* Blue links */
-  --link-hover: #000080;          /* Dark blue link hover */
-  --button-primary: #008000;      /* Green primary buttons */
-  --button-secondary: #0000ff;    /* Blue secondary buttons */
-  --button-outline: #008000;      /* Green outline buttons */
+  /* Interactive Colors - Forest Theme */
+  --link-color: #40916C;          /* Emerald green links */
+  --link-hover: #1B4332;          /* Deep forest link hover */
+  --button-primary: #52B788;      /* Spring green primary buttons */
+  --button-secondary: #40916C;    /* Emerald secondary buttons */
+  --button-outline: #1B4332;      /* Deep forest outline buttons */
   
-  /* Border and Shadow Colors */
-  --border-color: #cccccc;        /* Gray borders */
-  --border-dark: #666666;         /* Dark gray borders */
-  --shadow-light: rgba(0, 0, 0, 0.1);    /* Light shadow */
-  --shadow-medium: rgba(0, 0, 0, 0.15);  /* Medium shadow */
-  --shadow-dark: rgba(0, 0, 0, 0.25);    /* Dark shadow */
+  /* Border and Shadow Colors - Natural Depth */
+  --border-color: #E8F5E8;        /* Very light forest borders */
+  --border-dark: #B7E4C7;         /* Light sage borders */
+  --shadow-light: rgba(27, 67, 50, 0.08);    /* Light forest shadow */
+  --shadow-medium: rgba(27, 67, 50, 0.16);   /* Medium forest shadow */
+  --shadow-dark: rgba(27, 67, 50, 0.24);     /* Dark forest shadow */
 }
 
 /* General styles */
