@@ -34,7 +34,7 @@
 
 **Acceptance Criteria:**
 - Website uses child-friendly language and visuals.
-- Anonymous reporting form is functional and easy to use.
+- The anonymous reporting form is functional and easy to use.
 - Helpline contact details are accessible on every page.
 - Information about abuse is presented in an age-appropriate manner.
 
@@ -54,7 +54,7 @@
 - Safeguarding policies are downloadable in PDF format.
 - Reporting forms are accessible and easy to fill out.
 - Contact details for safeguarding leads are updated and visible.
-- FAQ section addresses at least 10 common safeguarding scenarios.
+- The FAQ section addresses at least 10 common safeguarding scenarios.
 
 ### 4. Social Workers and Professionals
 **AS A** social worker or safeguarding professional  
@@ -76,7 +76,7 @@
 
 ### 5. Community Members
 **AS A** community member or concerned citizen  
-**I WANT EASY** access to information about recognizing and reporting safeguarding concerns  
+**I WANT EASY** access to information about recognising and reporting safeguarding concerns  
 **SO THAT I CAN HAVE KEY** knowledge about child protection in my community  
 **AND CLEAR INFORMATION** about how to take appropriate action when needed
 
@@ -132,7 +132,7 @@
 
 ### 8. Law Enforcement Officers
 **AS A** police officer or law enforcement professional  
-**I WANT EASY** access to specialized safeguarding investigation resources  
+**I WANT EASY** access to specialised safeguarding investigation resources  
 **SO THAT I CAN HAVE KEY** procedures for handling sensitive cases  
 **AND CLEAR INFORMATION** about evidence collection and victim support protocols
 
@@ -146,7 +146,7 @@
 - Investigation guidelines are accessible in a dedicated section.
 - Evidence collection protocols are downloadable.
 - Victim interview techniques are outlined in a step-by-step guide.
-- Inter-agency coordination procedures are clearly documented.
+- Inter-agency coordination procedures are documented.
 
 ## Accessibility and Inclusion
 
@@ -171,7 +171,7 @@
 ### 10. Non-English Speaking Users
 **AS A** person whose first language is not English  
 **I WANT EASY** access to safeguarding information in multiple languages  
-**SO THAT I CAN HAVE KEY** understanding of safeguarding processes  
+**SO THAT I CAN HAVE A KEY** understanding of safeguarding processes  
 **AND CLEAR INFORMATION** about culturally sensitive support services
 
 **User needs are:**
@@ -183,7 +183,7 @@
 **Acceptance Criteria:**
 - Website content is available in at least 5 languages.
 - Translation options are accessible from the homepage.
-- Links to cultural support organizations are functional.
+- Links to cultural support organisations are functional.
 - Visual aids are used to complement text content.
 
 ## Administrative Users
@@ -201,7 +201,7 @@
 - Regular content review workflows
 
 **Acceptance Criteria:**
-- Content management system allows updates without technical expertise.
+- A content management system allows updates without technical expertise.
 - User analytics are accessible and exportable.
 - Security controls are in place to protect user data.
 - Content review workflows are documented and functional.
@@ -251,7 +251,7 @@
 **AND CLEAR INFORMATION** about preserving evidence and ensuring victim safety
 
 **User needs are:**
-- Mobile-optimized quick reference guides
+- Mobile-optimised quick reference guides
 - Emergency contact directories
 - Evidence preservation checklists
 - Victim support protocols
@@ -268,5 +268,5 @@ https://youtu.be/3C_22eBWpjg?si=rlUtl0D1bvMBStH8
 I used Copilot to create my User stories. Microsoft designed to create AI images for my website. I was 
 having difficulties finding images.
 
-I found this image on Google images for my initial colour palette. I've gone for green as my main colour.
+I found this image on Google images for my initial colour palette. I've gone for green as my main colour, as it is associated with safety. 
 https://piktochart.com/wp-content/uploads/2024/03/enchanted-forest-green-color-palette.jpg
