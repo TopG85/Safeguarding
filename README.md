@@ -298,4 +298,8 @@ I use prompts in Copilot. I asked Copilot to limit the colour palette to green, 
 <img width="1728" height="1117" alt="Screenshot 2025-07-30 at 12 04 35" src="https://github.com/user-attachments/assets/84a0a6c5-d1d6-4c0a-9f33-a00e68b2d57d" />
 
 
+I also used Copilot to create my resource section. 
+<img width="1728" height="1117" alt="Screenshot 2025-07-30 at 11 31 59" src="https://github.com/user-attachments/assets/bcf7e876-0cb5-48c8-a151-54d6c9b213fb" />
+
+<img width="1728" height="1117" alt="Screenshot 2025-07-30 at 12 31 41" src="https://github.com/user-attachments/assets/562fb75c-c4c3-4dd7-8be3-c2475d64a511" />
 
