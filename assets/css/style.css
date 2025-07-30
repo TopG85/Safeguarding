@@ -53,6 +53,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 80px; /* Account for fixed navbar */
 }
 
 h1 {
@@ -269,6 +270,10 @@ img {
 
 /* Mobile First - Base styles for mobile */
 @media (max-width: 575.98px) {
+  body {
+    padding-top: 70px; /* Smaller navbar on mobile */
+  }
+  
   .hero-section {
     min-height: auto;
     padding: var(--spacing-lg) 0;
@@ -318,6 +323,10 @@ img {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    padding-top: 75px; /* Medium navbar size */
+  }
+  
   .hero-title {
     font-size: 2.5rem;
   }
@@ -330,6 +339,10 @@ img {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    padding-top: 80px; /* Standard navbar size */
+  }
+  
   .hero-section {
     min-height: 70vh;
   }
