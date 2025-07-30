@@ -3,14 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta name="description"
     content="Discover best practices for safeguarding children and vulnerable adults. Learn how to create safe environments, spot signs of abuse, and take action effectively.">
   <meta name="keywords"
     content="safeguarding, child protection, vulnerable adults, abuse prevention, online safety, safeguarding training, safeguarding policies, duty of care, risk assessment, safe environments">
-
+  <meta name="theme-color" content="#2d5a41">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
   <title>Safeguarding Matters</title>
+  
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/Favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/Favicons/favicon-16x16.png">
@@ -20,14 +24,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Optimized Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style-optimized.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
   <!-- Navigation -->
-  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="assets/images/safeguarding1.jpeg"
@@ -59,19 +63,21 @@
     <div class="container-fluid h-100">
       <div class="row h-100 align-items-center">
         <!-- Image Column -->
-        <div class="col-lg-6 col-md-6 h-100 p-0">
+        <div class="col-lg-6 col-md-6 h-100 p-0 order-2 order-md-1">
           <div class="hero-image-container">
-            <img src="assets/images/safeguarding7.jpeg" alt="Safeguarding Matters - Protecting our community" class="hero-image">
+            <img src="assets/images/safeguarding7.jpeg" alt="Safeguarding Matters - Protecting our community"
+              class="hero-image" loading="eager">
           </div>
         </div>
         <!-- Content Column -->
-        <div class="col-lg-6 col-md-6 h-100 d-flex align-items-center">
+        <div class="col-lg-6 col-md-6 h-100 d-flex align-items-center order-1 order-md-2">
           <div class="hero-content text-center text-md-start px-4 px-lg-5">
             <h1 class="hero-title display-3 display-lg-2 fw-bold mb-4">SAFEGUARDING MATTERS</h1>
-            <p class="hero-subtitle lead fs-5 mb-4">Protecting everyone's well-being, rights, and safety is everyone's responsibility.</p>
-            <div class="hero-buttons">
-              <a href="#resources" class="btn btn-lg me-3 mb-2" style="background-color: #2D5A41; color: #FFFFFF; text-decoration: none; padding: 12px 30px; border-radius: 8px;">Get Support</a>
-              <a href="#contact" class="btn btn-lg me-3 mb-2" style="padding: 12px 30px; border-radius: 8px;">Report Concern</a>
+            <p class="hero-subtitle lead fs-5 mb-4">Protecting everyone's well-being, rights, and safety is everyone's
+              responsibility.</p>
+            <div class="hero-buttons d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-md-start">
+              <a href="#resources" class="btn btn-primary">Get Support</a>
+              <a href="#contact" class="btn btn-outline-primary">Report Concern</a>
             </div>
           </div>
         </div>
@@ -79,7 +85,7 @@
     </div>
   </div>
   <!-- Key Information Sections -->
-  <div class="container mb-5">
+  <div class="container mb-5 mt-5">
     <div class="row">
       <!-- What is Safeguarding? -->
       <div class="col-lg-4 col-md-6 col-12 mb-4">
@@ -87,95 +93,154 @@
           <img src="assets/images/Designer.jpeg" alt="What is Safeguarding?" class="card-img-top img-fluid">
           <div class="card-body">
             <h3 class="card-title">What is Safeguarding?</h3>
-            <p class="card-text">
-              Safeguarding means protecting people, especially vulnerable individuals, from harm, abuse, and neglect. It
-              ensures their well-being and upholds their human rights.
-            </p>
-            <div class="mt-3">
-              <h6 class="fw-bold">Key Principles:</h6>
-              <ul class="list-unstyled">
-                <li>• <strong>Prevention:</strong> Stopping harm before it happens</li>
-                <li>• <strong>Empowerment:</strong> Supporting people to make their own decisions</li>
-                <li>• <strong>Proportionality:</strong> Responding appropriately to the level of risk</li>
-                <li>• <strong>Partnership:</strong> Working together for the best outcomes</li>
+            <p class="card-text">Safeguarding is a comprehensive approach to protecting the health, wellbeing, dignity, and human rights of individuals who may be vulnerable to harm, abuse, or neglect. It encompasses a wide range of activities designed to promote safety, prevent abuse, and respond effectively when concerns arise.</p>
+            
+            <div class="mt-2">
+              <h6 class="fw-bold" style="color: #2D5A41;">Core Definition</h6>
+              <p class="small mb-2">Safeguarding means taking action to enable all individuals to live safely, free from abuse and neglect. It involves protecting people's health, wellbeing, and human rights, and enabling them to live free from harm, abuse, and neglect.</p>
+
+              <h6 class="fw-bold" style="color: #FF8C00;">Key Principles</h6>
+              <ul class="list-unstyled mb-2">
+                <li>• <strong>Empowerment:</strong> People being supported and encouraged to make their own decisions and give informed consent</li>
+                <li>• <strong>Prevention:</strong> It's better to take action before harm occurs</li>
+                <li>• <strong>Proportionality:</strong> The least intrusive response appropriate to the risk presented</li>
+                <li>• <strong>Protection:</strong> Support and representation for those in greatest need</li>
+                <li>• <strong>Partnership:</strong> Local solutions through services working together</li>
+                <li>• <strong>Accountability:</strong> Transparency in safeguarding practice</li>
               </ul>
-              <small class="text-muted">Everyone has a responsibility to safeguard others, not just
-                professionals.</small>
+
+              <h6 class="fw-bold" style="color: #7B68EE;">Who Needs Safeguarding?</h6>
+              <ul class="list-unstyled mb-2">
+                <li>• <strong>Children and young people:</strong> Under 18 years old</li>
+                <li>• <strong>Adults at risk:</strong> 18+ who have care and support needs and are experiencing, or at risk of, abuse or neglect</li>
+                <li>• <strong>Vulnerable adults:</strong> Those with physical or mental disabilities, illness, or impairment</li>
+                <li>• <strong>Older people:</strong> Particularly those with dementia or physical frailty</li>
+                <li>• <strong>Anyone in temporary vulnerability:</strong> Due to circumstances, isolation, or dependency</li>
+              </ul>
+
+              <h6 class="fw-bold" style="color: #000000;">Types of Abuse</h6>
+              <ul class="list-unstyled mb-2">
+                <li>• Physical abuse • Sexual abuse • Emotional/psychological abuse</li>
+                <li>• Neglect • Financial abuse • Domestic violence</li>
+                <li>• Modern slavery • Discriminatory abuse • Organizational abuse</li>
+              </ul>
+
+              <div class="alert alert-info mt-2 py-2">
+                <small><strong>Remember:</strong> Safeguarding is everyone's responsibility - not just professionals. We all have a duty to protect those who may be vulnerable.</small>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       <!-- Signs to Watch For -->
       <div class="col-lg-4 col-md-6 col-12 mb-4">
         <div class="card h-100 shadow-sm">
           <img src="assets/images/Designer (3).jpeg" alt="Signs to Watch For" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h3 class="card-title">Signs to Watch For</h3>
-            <p class="small text-muted mb-3">Look out for these warning signs that someone may need help:</p>
+      <div class="card-body">
+        <h3 class="card-title">Signs to Watch For</h3>
+        <p class="small text-muted mb-3">Learn to recognize these warning signs that someone may need help:</p>
 
-            <h6 class="fw-bold" style="color: #7B68EE;">Physical Signs:</h6>
-            <ul class="list-group list-group-flush mb-3">
-              <li class="list-group-item border-0 px-0 py-1">• Unexplained injuries or bruises</li>
-              <li class="list-group-item border-0 px-0 py-1">• Poor hygiene or unsuitable clothing</li>
-              <li class="list-group-item border-0 px-0 py-1">• Sudden weight loss or malnutrition</li>
-            </ul>
+        <h6 class="fw-bold" style="color: #7B68EE;">Physical Warning Signs</h6>
+        <ul class="list-group list-group-flush mb-3">
+          <li class="list-group-item border-0 px-0 py-1">• Unexplained injuries, bruises, cuts, or burns</li>
+          <li class="list-group-item border-0 px-0 py-1">• Frequent accidents or injuries with vague explanations</li>
+          <li class="list-group-item border-0 px-0 py-1">• Poor personal hygiene or unkempt appearance</li>
+          <li class="list-group-item border-0 px-0 py-1">• Inappropriate clothing for weather or situation</li>
+          <li class="list-group-item border-0 px-0 py-1">• Signs of malnutrition or dehydration</li>
+          <li class="list-group-item border-0 px-0 py-1">• Untreated medical or dental problems</li>
+          <li class="list-group-item border-0 px-0 py-1">• Flinching when approached or touched</li>
+          <li class="list-group-item border-0 px-0 py-1">• Evidence of poor supervision or abandonment</li>
+        </ul>
 
-            <h6 class="fw-bold" style="color: #7B68EE;">Behavioral Changes:</h6>
-            <ul class="list-group list-group-flush mb-3">
-              <li class="list-group-item border-0 px-0 py-1">• Withdrawal or fearfulness</li>
-              <li class="list-group-item border-0 px-0 py-1">• Reluctance to go home or be with certain people</li>
-              <li class="list-group-item border-0 px-0 py-1">• Sudden changes in behavior or mood</li>
-            </ul>
+        <h6 class="fw-bold" style="color: #7B68EE;">Behavioral Warning Signs</h6>
+        <ul class="list-group list-group-flush mb-3">
+          <li class="list-group-item border-0 px-0 py-1">• Sudden changes in behavior, mood, or personality</li>
+          <li class="list-group-item border-0 px-0 py-1">• Withdrawal from activities, friends, or family</li>
+          <li class="list-group-item border-0 px-0 py-1">• Fear of specific people, places, or situations</li>
+          <li class="list-group-item border-0 px-0 py-1">• Regression to earlier behaviors (bed-wetting, thumb-sucking)
+          </li>
+          <li class="list-group-item border-0 px-0 py-1">• Self-harm behaviors or suicide attempts</li>
+          <li class="list-group-item border-0 px-0 py-1">• Difficulty sleeping or frequent nightmares</li>
+          <li class="list-group-item border-0 px-0 py-1">• Loss of appetite or eating disorders</li>
+          <li class="list-group-item border-0 px-0 py-1">• Aggressive or violent behavior</li>
+        </ul>
 
-            <h6 class="fw-bold" style="color: #7B68EE;">Other Concerns:</h6>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item border-0 px-0 py-1">• Sudden changes in finances or possessions</li>
-              <li class="list-group-item border-0 px-0 py-1">• Isolation from friends and family</li>
-            </ul>
+        <h6 class="fw-bold" style="color: #7B68EE;">Emotional Warning Signs</h6>
+        <ul class="list-group list-group-flush mb-3">
+          <li class="list-group-item border-0 px-0 py-1">• Low self-esteem or self-worth</li>
+          <li class="list-group-item border-0 px-0 py-1">• Depression, anxiety, or emotional instability</li>
+          <li class="list-group-item border-0 px-0 py-1">• Difficulty forming relationships or trusting others</li>
+          <li class="list-group-item border-0 px-0 py-1">• Excessive compliance or people-pleasing behavior</li>
+          <li class="list-group-item border-0 px-0 py-1">• Inappropriate emotional responses to situations</li>
+          <li class="list-group-item border-0 px-0 py-1">• Lack of emotional expression or flat affect</li>
+        </ul>
 
-            <div class="alert alert-info mt-3 py-2">
-              <small><strong>Remember:</strong> Trust your instincts. If something doesn't feel right, it's worth
-                reporting.</small>
-            </div>
-          </div>
+        <h6 class="fw-bold" style="color: #7B68EE;">Social Warning Signs</h6>
+        <ul class="list-group list-group-flush mb-3">
+          <li class="list-group-item border-0 px-0 py-1">• Isolation from friends, family, or support networks</li>
+          <li class="list-group-item border-0 px-0 py-1">• Reluctance to participate in activities they once enjoyed
+          </li>
+          <li class="list-group-item border-0 px-0 py-1">• Being prevented from accessing services or opportunities</li>
+          <li class="list-group-item border-0 px-0 py-1">• Someone else speaking for them or controlling their
+            interactions</li>
+          <li class="list-group-item border-0 px-0 py-1">• Missing work, school, or appointments frequently</li>
+          <li class="list-group-item border-0 px-0 py-1">• Loss of independence or decision-making ability</li>
+        </ul>
+
+        <h6 class="fw-bold" style="color: #7B68EE;">Financial Warning Signs</h6>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item border-0 px-0 py-1">• Sudden changes in financial situation or spending patterns
+          </li>
+          <li class="list-group-item border-0 px-0 py-1">• Unexplained loss of money or valuable possessions</li>
+          <li class="list-group-item border-0 px-0 py-1">• Someone else controlling their finances or benefits</li>
+          <li class="list-group-item border-0 px-0 py-1">• Inability to access their own money or accounts</li>
+          <li class="list-group-item border-0 px-0 py-1">• Being pressured to change wills or legal documents</li>
+          <li class="list-group-item border-0 px-0 py-1">• Lack of basic necessities despite adequate income</li>
+        </ul>
+
+        <div class="alert alert-info mt-3 py-2">
+          <small><strong>Remember:</strong> Trust your instincts. If something doesn't feel right, it's worth
+            reporting.</small>
         </div>
       </div>
-      <!-- Action Steps -->
-      <div class="col-lg-4 col-md-12 col-12 mb-4">
-        <div class="card h-100 shadow-sm">
-          <img src="assets/images/Designer (1).jpeg" alt="Action Steps" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h3 class="card-title">Action Steps</h3>
-            <p class="small text-muted mb-3">If you have concerns about someone's safety, follow these steps:</p>
+    </div>
+  </div>
+  <!-- Action Steps -->
+  <div class="col-lg-4 col-md-12 col-12 mb-4">
+    <div class="card h-100 shadow-sm">
+      <img src="assets/images/Designer (1).jpeg" alt="Action Steps" class="card-img-top img-fluid">
+      <div class="card-body">
+        <h3 class="card-title">Action Steps</h3>
+        <p class="small text-muted mb-3">If you have concerns about someone's safety, follow these steps:</p>
 
-            <h6 class="fw-bold" style="color: #2D5A41;">Immediate Response:</h6>
-            <ul class="list-group list-group-flush mb-3">
-              <li class="list-group-item border-0 px-0 py-1">• Stay calm and listen carefully</li>
-              <li class="list-group-item border-0 px-0 py-1">• Reassure them they did the right thing speaking up</li>
-              <li class="list-group-item border-0 px-0 py-1">• Do not promise confidentiality</li>
-              <li class="list-group-item border-0 px-0 py-1">• Ask open questions, don't interrogate</li>
-            </ul>
+        <h6 class="fw-bold" style="color: #2D5A41;">Immediate Response:</h6>
+        <ul class="list-group list-group-flush mb-3">
+          <li class="list-group-item border-0 px-0 py-1">• Stay calm and listen carefully</li>
+          <li class="list-group-item border-0 px-0 py-1">• Reassure them they did the right thing speaking up</li>
+          <li class="list-group-item border-0 px-0 py-1">• Do not promise confidentiality</li>
+          <li class="list-group-item border-0 px-0 py-1">• Ask open questions, don't interrogate</li>
+        </ul>
 
-            <h6 class="fw-bold" style="color: #2D5A41;">Documentation & Reporting:</h6>
-            <ul class="list-group list-group-flush mb-3">
-              <li class="list-group-item border-0 px-0 py-1">• Record what was said as soon as possible</li>
-              <li class="list-group-item border-0 px-0 py-1">• Use their exact words where possible</li>
-              <li class="list-group-item border-0 px-0 py-1">• Report your concerns to appropriate authorities</li>
-            </ul>
+        <h6 class="fw-bold" style="color: #2D5A41;">Documentation & Reporting:</h6>
+        <ul class="list-group list-group-flush mb-3">
+          <li class="list-group-item border-0 px-0 py-1">• Record what was said as soon as possible</li>
+          <li class="list-group-item border-0 px-0 py-1">• Use their exact words where possible</li>
+          <li class="list-group-item border-0 px-0 py-1">• Report your concerns to appropriate authorities</li>
+        </ul>
 
-            <div class="alert" style="background-color: #FF8C00; color: #000000; border: 1px solid #E67E00;"
-              class="py-2">
-              <small><strong>Emergency:</strong> If someone is in immediate danger, call 999 immediately.</small>
-            </div>
+        <div class="alert" style="background-color: #FF8C00; color: #000000; border: 1px solid #E67E00;" class="py-2">
+          <small><strong>Emergency:</strong> If someone is in immediate danger, call 999 immediately.</small>
+        </div>
 
-            <div class="alert" style="background-color: #2D5A41; color: #FFFFFF; border: 1px solid #1B4332;"
-              class="py-2 mt-2">
-              <small><strong>Non-emergency:</strong> Contact local safeguarding services or use our contact form
-                below.</small>
-            </div>
-          </div>
+        <div class="alert" style="background-color: #2D5A41; color: #FFFFFF; border: 1px solid #1B4332;"
+          class="py-2 mt-2">
+          <small><strong>Non-emergency:</strong> Contact local safeguarding services or use our contact form
+            below.</small>
         </div>
       </div>
+    </div>
+  </div>
     </div>
   </div>
 
@@ -346,30 +411,30 @@
         <div class="col-12 text-center mb-4">
           <h3 class="fw-bold" style="color: #000000;">Quick Reference Guide</h3>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
-          <div class="card h-100" style="border: 2px solid #000000;">
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <div class="card h-100 border-dark border-2">
             <div class="card-body text-center">
-              <i class="fa-solid fa-exclamation-triangle fa-2x fa-md-3x mb-3" style="color: #000000;"></i>
+              <i class="fa-solid fa-exclamation-triangle fa-3x mb-3 text-dark"></i>
               <h6 class="fw-bold">Emergency</h6>
               <p class="small">Someone is in immediate danger</p>
-              <div class="btn btn-sm w-100" style="background-color: #000000; color: #FFFFFF;">Call 999</div>
+              <a href="tel:999" class="btn btn-dark btn-sm w-100">Call 999</a>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
           <div class="card h-100" style="border: 2px solid #FF8C00;">
             <div class="card-body text-center">
-              <i class="fa-solid fa-clock fa-2x fa-md-3x mb-3" style="color: #FF8C00;"></i>
+              <i class="fa-solid fa-clock fa-3x mb-3" style="color: #FF8C00;"></i>
               <h6 class="fw-bold">Urgent</h6>
               <p class="small">Concern needs addressing within 24 hours</p>
               <div class="btn btn-sm w-100" style="background-color: #FF8C00; color: #000000;">Contact Local Services</div>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
           <div class="card h-100" style="border: 2px solid #2D5A41;">
             <div class="card-body text-center">
-              <i class="fa-solid fa-clipboard-list fa-2x fa-md-3x mb-3" style="color: #2D5A41;"></i>
+              <i class="fa-solid fa-clipboard-list fa-3x mb-3" style="color: #2D5A41;"></i>
               <h6 class="fw-bold">Routine</h6>
               <p class="small">General concern needs follow-up</p>
               <a href="#contact" class="btn btn-sm w-100"
@@ -377,10 +442,10 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
           <div class="card h-100" style="border: 2px solid #7B68EE;">
             <div class="card-body text-center">
-              <i class="fa-solid fa-question-circle fa-2x fa-md-3x mb-3" style="color: #7B68EE;"></i>
+              <i class="fa-solid fa-question-circle fa-3x mb-3" style="color: #7B68EE;"></i>
               <h6 class="fw-bold">Unsure?</h6>
               <p class="small">Not sure if it's a safeguarding issue</p>
               <div class="btn btn-sm w-100" style="background-color: #7B68EE; color: #000000;">Ask for Advice</div>
@@ -527,9 +592,9 @@
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mb-3">
+                <div class="col-lg-6 col-md-6 col-12 mb-3">
                   <div class="text-center">
-                    <i class="fa-solid fa-shield-alt fa-2x fa-md-3x mb-2" style="color: #7B68EE;"></i>
+                    <i class="fa-solid fa-shield-alt fa-3x mb-2" style="color: #7B68EE;"></i>
                     <h6 class="fw-bold">Gov.uk Safeguarding</h6>
                     <p class="small mb-2">Official government guidance</p>
                     <a href="https://www.gov.uk/topic/schools-colleges-childrens-services/safeguarding-children"
@@ -537,27 +602,27 @@
                       style="background-color: #7B68EE; color: #000000; text-decoration: none;">Visit Site</a>
                   </div>
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mb-3">
+                <div class="col-lg-6 col-md-6 col-12 mb-3">
                   <div class="text-center">
-                    <i class="fa-solid fa-book fa-2x fa-md-3x mb-2" style="color: #7B68EE;"></i>
+                    <i class="fa-solid fa-book fa-3x mb-2" style="color: #7B68EE;"></i>
                     <h6 class="fw-bold">NSPCC Learning</h6>
                     <p class="small mb-2">Training and resources</p>
                     <a href="https://learning.nspcc.org.uk/" target="_blank" class="btn btn-sm w-100"
                       style="background-color: #7B68EE; color: #000000; text-decoration: none;">Visit Site</a>
                   </div>
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mb-3">
+                <div class="col-lg-6 col-md-6 col-12 mb-3">
                   <div class="text-center">
-                    <i class="fa-solid fa-users fa-2x fa-md-3x mb-2" style="color: #7B68EE;"></i>
+                    <i class="fa-solid fa-users fa-3x mb-2" style="color: #7B68EE;"></i>
                     <h6 class="fw-bold">Social Care Institute</h6>
                     <p class="small mb-2">Professional development</p>
                     <a href="https://www.scie.org.uk/" target="_blank" class="btn btn-sm w-100"
                       style="background-color: #7B68EE; color: #000000; text-decoration: none;">Visit Site</a>
                   </div>
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mb-3">
+                <div class="col-lg-6 col-md-6 col-12 mb-3">
                   <div class="text-center">
-                    <i class="fa-solid fa-laptop fa-2x fa-md-3x mb-2" style="color: #7B68EE;"></i>
+                    <i class="fa-solid fa-laptop fa-3x mb-2" style="color: #7B68EE;"></i>
                     <h6 class="fw-bold">ThinkUKnow</h6>
                     <p class="small mb-2">Online safety education</p>
                     <a href="https://www.thinkuknow.co.uk/" target="_blank" class="btn btn-sm w-100"
@@ -579,33 +644,43 @@
             </div>
             <div class="card-body">
               <p class="text-muted mb-4">Local organizations and services providing support in your community</p>
-              
+
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-12 mb-4">
                   <div class="card h-100 border-0 shadow-sm">
-                    <img src="assets/images/Hope-Central.png" class="card-img-top" alt="Hope Central charity, Bringing hope; relieving poverty">
+                    <img src="assets/images/Hope-Central.png" class="card-img-top"
+                      style="height: 200px; object-fit: contain; padding: 15px;"
+                      alt="Hope Central charity, Bringing hope; relieving poverty">
                     <div class="card-body d-flex flex-column">
                       <h5 class="card-title fw-bold" style="color: #2D5A41;">Hope Central</h5>
-                      <p class="card-text flex-grow-1">A local charity dedicated to bringing hope and relieving poverty in our community through various support programs.</p>
-                      <a href="https://www.hopecentral.org.uk/" target="_blank" class="btn mt-auto w-100" style="background-color: #2D5A41; color: #FFFFFF; text-decoration: none;">Visit Hope Central</a>
+                      <p class="card-text flex-grow-1">A local charity dedicated to bringing hope and relieving poverty
+                        in our community through various support programs.</p>
+                      <a href="https://www.hopecentral.org.uk/" target="_blank" class="btn mt-auto w-100"
+                        style="background-color: #2D5A41; color: #FFFFFF; text-decoration: none;">Visit Hope Central</a>
                     </div>
                   </div>
                 </div>
-                
+
                 <div class="col-lg-6 col-md-6 col-12 mb-4">
                   <div class="card h-100 border-0 shadow-sm">
-                    <img src="assets/images/hope-centra-logo.png" class="card-img-top" alt="Hope Central pantry services">
+                    <img src="assets/images/hope-centra-logo.png" class="card-img-top"
+                      style="height: 200px; object-fit: contain; padding: 15px;" alt="Hope Central pantry services">
                     <div class="card-body d-flex flex-column">
                       <h5 class="card-title fw-bold" style="color: #2D5A41;">Hope Central Pantry</h5>
-                      <p class="card-text flex-grow-1">Community pantry service providing food support and essential items to families and individuals in need.</p>
-                      <a href="https://www.yourlocalpantry.co.uk/" target="_blank" class="btn mt-auto w-100" style="background-color: #2D5A41; color: #FFFFFF; text-decoration: none;">Visit Pantry</a>
+                      <p class="card-text flex-grow-1">Community pantry service providing food support and essential
+                        items to families and individuals in need.</p>
+                      <a href="https://www.yourlocalpantry.co.uk/" target="_blank" class="btn mt-auto w-100"
+                        style="background-color: #2D5A41; color: #FFFFFF; text-decoration: none;">Visit Pantry</a>
                     </div>
                   </div>
                 </div>
               </div>
-              
-              <div class="alert mt-4 mb-5" style="background-color: #2D5A41; color: #FFFFFF; border: 1px solid #1B4332;">
-                <small><i class="fa-solid fa-info-circle me-1"></i><strong>Add More Resources:</strong> To include additional local services and organizations in this section, please contact us using the form below with the details you'd like added.</small>
+
+              <div class="alert mt-4 mb-5"
+                style="background-color: #2D5A41; color: #FFFFFF; border: 1px solid #1B4332;">
+                <small><i class="fa-solid fa-info-circle me-1"></i><strong>Add More Resources:</strong> To include
+                  additional local services and organizations in this section, please contact us using the form below
+                  with the details you'd like added.</small>
               </div>
             </div>
           </div>
@@ -617,198 +692,173 @@
   <!-- Spacer div to prevent cards from overlapping into footer -->
   <div class="py-5"></div>
 
-      <!-- Footer / contact section -->
-      <!-- mt-auto added to push footer to the bottom of the page -->
-      <footer id="contact" class="mt-auto">
-        <div class="container section">
+  <!-- Footer / contact section -->
+  <!-- mt-auto added to push footer to the bottom of the page -->
+  <footer id="contact" class="mt-auto">
+    <div class="container section">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center"></div>
+        <!-- Contact Section -->
+        <div class="container mb-5" id="contact">
           <div class="row justify-content-center">
-            <div class="col-12 text-center"></div>
-            <!-- Contact Section -->
-            <div class="container mb-5" id="contact">
-              <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 col-12">
-                  <div class="col-12 text-center">
-                    <h2 class="display-6">Contact us!</h2>
+            <div class="col-lg-8 col-md-10 col-12">
+              <div class="col-12 text-center">
+                <h2 class="display-6">Contact us!</h2>
+              </div>
+              <h3 class="mb-3">Report a Safeguarding Concern</h3>
+              <div class="alert mb-4" style="background-color: #7B68EE; color: #000000; border: 1px solid #6A5ACD;">
+                <h6 class="fw-bold mb-2"><i class="fa-solid fa-info-circle me-1"></i>Before you report:</h6>
+                <ul class="mb-0 small">
+                  <li>If someone is in immediate danger, call 999 first</li>
+                  <li>You can report anonymously if you prefer</li>
+                  <li>All reports are taken seriously and handled confidentially</li>
+                  <li>You will not get in trouble for reporting genuine concerns</li>
+                </ul>
+              </div>
+              <form action="#" method="POST" id="safeguarding-form">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name <span class="text-muted">(optional - you can remain
+                      anonymous)</span></label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Your Email <span class="text-muted">(optional)</span></label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                  <label for="urgency" class="form-label">Urgency Level</label>
+                  <select class="form-select" id="urgency" name="urgency" required>
+                    <option value="">Please select urgency level</option>
+                    <option value="immediate">Immediate danger - someone is at risk right now</option>
+                    <option value="urgent">Urgent - concern needs addressing within 24 hours</option>
+                    <option value="routine">Routine - general concern that needs follow-up</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Your Concern</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" required
+                    placeholder="Please describe your concern. Include: Who is involved? What happened? When did it happen? Where did it happen? Any other relevant details."></textarea>
+                  <div class="form-text">The more detail you can provide, the better we can help. Don't worry about
+                    getting everything perfect.</div>
+                </div>
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn custom-button-outline my-4">Submit</button>
+                </div>
+              </form>
+              <div class="mt-4">
+                <h5><i class="fa-solid fa-bullhorn"></i> Alternative Contact Methods:</h5>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <p class="mb-2"><i class="fa-solid fa-phone-volume"></i> <strong>24/7 Helpline:</strong><br>012
+                      345
+                      6789</p>
+                    <p class="mb-2"><i class="fa-solid fa-paper-plane"></i>
+                      <strong>Email:</strong><br>info@safeguarding-world.com
+                    </p>
                   </div>
-                  <h3 class="mb-3">Report a Safeguarding Concern</h3>
-                  <div class="alert mb-4" style="background-color: #7B68EE; color: #000000; border: 1px solid #6A5ACD;">
-                    <h6 class="fw-bold mb-2"><i class="fa-solid fa-info-circle me-1"></i>Before you report:</h6>
-                    <ul class="mb-0 small">
-                      <li>If someone is in immediate danger, call 999 first</li>
-                      <li>You can report anonymously if you prefer</li>
-                      <li>All reports are taken seriously and handled confidentially</li>
-                      <li>You will not get in trouble for reporting genuine concerns</li>
-                    </ul>
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <p class="mb-2"><i class="fa-solid fa-comments"></i> <strong>Text/SMS:</strong><br>07123 456 789
+                    </p>
+                    <p class="mb-0"><i class="fa-solid fa-map-marker-alt"></i> <strong>In person:</strong><br>Visit
+                      your
+                      local council offices</p>
                   </div>
-                  <form action="#" method="POST" id="safeguarding-form">
-                    <div class="mb-3">
-                      <label for="name" class="form-label">Your Name <span class="text-muted">(optional - you can remain
-                          anonymous)</span></label>
-                      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-                    </div>
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Your Email <span
-                          class="text-muted">(optional)</span></label>
-                      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
-                    </div>
-                    <div class="mb-3">
-                      <label for="urgency" class="form-label">Urgency Level</label>
-                      <select class="form-select" id="urgency" name="urgency" required>
-                        <option value="">Please select urgency level</option>
-                        <option value="immediate">Immediate danger - someone is at risk right now</option>
-                        <option value="urgent">Urgent - concern needs addressing within 24 hours</option>
-                        <option value="routine">Routine - general concern that needs follow-up</option>
-                      </select>
-                    </div>
-                    <div class="mb-3">
-                      <label for="message" class="form-label">Your Concern</label>
-                      <textarea class="form-control" id="message" name="message" rows="5" required
-                        placeholder="Please describe your concern. Include: Who is involved? What happened? When did it happen? Where did it happen? Any other relevant details."></textarea>
-                      <div class="form-text">The more detail you can provide, the better we can help. Don't worry about
-                        getting everything perfect.</div>
-                    </div>
-                    <div class="col-12 text-center">
-                      <button type="submit" class="btn custom-button-outline my-4">Submit</button>
-                    </div>
-                  </form>
-                  <div class="mt-4">
-                    <h5><i class="fa-solid fa-bullhorn"></i> Alternative Contact Methods:</h5>
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 col-12">
-                        <p class="mb-2"><i class="fa-solid fa-phone-volume"></i> <strong>24/7 Helpline:</strong><br>012
-                          345
-                          6789</p>
-                        <p class="mb-2"><i class="fa-solid fa-paper-plane"></i>
-                          <strong>Email:</strong><br>info@safeguarding-world.com
-                        </p>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-12">
-                        <p class="mb-2"><i class="fa-solid fa-comments"></i> <strong>Text/SMS:</strong><br>07123 456 789
-                        </p>
-                        <p class="mb-0"><i class="fa-solid fa-map-marker-alt"></i> <strong>In person:</strong><br>Visit
-                          your
-                          local council offices</p>
-                      </div>
-                    </div>
-                    <div class="row mt-3">
-                      <div class="col-12">
-                        <p class="mb-2"><i class="fa-solid fa-address-book"></i> <strong>Address:</strong><br>4 Safe
-                          Street,<br>Safefield,<br>SG4 4SF</p>
-                      </div>
-                    </div>
-                  <div class="alert mt-3" style="background-color: #2D5A41; color: #FFFFFF; border: 1px solid #1B4332;">
-                    <small><i class="fa-solid fa-shield-alt me-1"></i><strong>Your safety matters:</strong> If you're
-                      worried about your own safety while reporting, speak to us about anonymous reporting
-                      options.</small>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12">
+                    <p class="mb-2"><i class="fa-solid fa-address-book"></i> <strong>Address:</strong><br>4 Safe
+                      Street,<br>Safefield,<br>SG4 4SF</p>
                   </div>
+                </div>
+                <div class="alert mt-3" style="background-color: #2D5A41; color: #FFFFFF; border: 1px solid #1B4332;">
+                  <small><i class="fa-solid fa-shield-alt me-1"></i><strong>Your safety matters:</strong> If you're
+                    worried about your own safety while reporting, speak to us about anonymous reporting
+                    options.</small>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="social-links my-4">
-          <a href="https://www.instagram.com" target="_blank" aria-label="Visit our Instagram page (opens in a new tab)"
-            rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.facebook.com" target="_blank" aria-label="Visit our Facebook page (opens in a new tab)"
-            rel="noopener"><i class="fa-brands fa-square-facebook"></i></a>
-          <a href="https://www.x.com" target="_blank" aria-label="Visit our X feed (opens in a new tab)"
-            rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
+      </div>
+      <div class="social-links my-4">
+        <a href="https://www.instagram.com" target="_blank" aria-label="Visit our Instagram page (opens in a new tab)"
+          rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com" target="_blank" aria-label="Visit our Facebook page (opens in a new tab)"
+          rel="noopener"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.x.com" target="_blank" aria-label="Visit our X feed (opens in a new tab)" rel="noopener"><i
+            class="fa-brands fa-x-twitter"></i></a>
+      </div>
     </div>
+  </footer>
 
-    <!-- Opening times -->
-    <div class="col-12 col-md-6 col-xl-4">
-      <h3 class="sub-heading-color">Opening times</h3>
-      <table class="table table-dark">
-        <thead>
-          <tr>
-            <th scope="col">Day</th>
-            <th scope="col">Open</th>
-            <th scope="col">Close</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Mon</th>
-            <td colspan="2">Closed</td>
-          </tr>
-          <tr>
-            <th scope="row">Tue - Thur</th>
-            <td>11am</td>
-            <td>11pm</td>
-          </tr>
-          <tr>
-            <th scope="row">Fri - Sat</th>
-            <td>11am</td>
-            <td>12am</td>
-          </tr>
-          <tr>
-            <th scope="row">Sun</th>
-            <td>12pm</td>
-            <td>7pm</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    </div>
-    </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-      </script>
-
-    <!-- Font Awesome kit -->
-    <script src="https://kit.fontawesome.com/aa9af45995.js" crossorigin="anonymous"></script>
-
-    <!-- Form handling JavaScript -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const form = document.getElementById('safeguarding-form');
-
-        if (form) {
-          form.addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent default form submission
-
-            // Get form data
-            const formData = new FormData(form);
-            const urgency = formData.get('urgency');
-            const message = formData.get('message');
-
-            // Basic validation
-            if (!urgency) {
-              alert('Please select an urgency level.');
-              return;
-            }
-
-            if (!message || message.trim().length < 10) {
-              alert('Please provide more details about your concern (at least 10 characters).');
-              return;
-            }
-
-            // Show urgency-specific message
-            let alertMessage = '';
-            if (urgency === 'immediate') {
-              alertMessage = 'IMMEDIATE DANGER ALERT: If someone is in immediate danger, please call 999 right now!\n\nYour report has been noted, but for immediate help, contact emergency services directly.';
-            } else {
-              alertMessage = 'Thank you for your report. Your concern has been recorded and will be reviewed by our safeguarding team.\n\nReference ID: SAF-' + Date.now().toString().slice(-6);
-            }
-
-            // Show success message
-            alert(alertMessage);
-
-            // Reset form
-            form.reset();
-
-            // In a real application, you would send this data to a server
-            console.log('Form data submitted:', Object.fromEntries(formData));
-          });
-        }
-      });
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
 
-    <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+  <!-- Font Awesome kit -->
+  <script src="https://kit.fontawesome.com/aa9af45995.js" crossorigin="anonymous"></script>
+
+  <!-- Form handling JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Form handling
+      const form = document.getElementById('safeguarding-form');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          
+          const formData = new FormData(form);
+          const urgency = formData.get('urgency');
+          const message = formData.get('message');
+
+          // Validation
+          if (!urgency) {
+            alert('Please select an urgency level.');
+            return;
+          }
+          if (!message || message.trim().length < 10) {
+            alert('Please provide more details about your concern (at least 10 characters).');
+            return;
+          }
+
+          // Response based on urgency
+          let alertMessage = urgency === 'immediate' 
+            ? 'IMMEDIATE DANGER ALERT: If someone is in immediate danger, please call 999 right now!\n\nYour report has been noted, but for immediate help, contact emergency services directly.'
+            : `Thank you for your report. Your concern has been recorded and will be reviewed by our safeguarding team.\n\nReference ID: SAF-${Date.now().toString().slice(-6)}`;
+
+          alert(alertMessage);
+          form.reset();
+        });
+      }
+
+      // Mobile navigation auto-collapse
+      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+      const navCollapse = document.querySelector('.navbar-collapse');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (navCollapse.classList.contains('show')) {
+            new bootstrap.Collapse(navCollapse).hide();
+          }
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 

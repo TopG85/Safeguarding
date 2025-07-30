@@ -907,7 +907,12 @@ h3 {
   }
   
   li {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.1rem;
+  }
+  
+  /* Specific spacing for key principles list */
+  .list-unstyled li {
+    margin-bottom: 0.1rem;
   }
   
   /* Better table responsiveness */
