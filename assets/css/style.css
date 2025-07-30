@@ -3,57 +3,57 @@
 /* CSS Variables for consistent theming - Limited Color Palette */
 :root {
   /* Core Color Palette - Green, Orange, Purple, Black */
-  --primary-color: #2D5A41;        /* Darker green - primary brand color */
-  --primary-light: #52B788;        /* Medium green - lighter interactions */
-  --primary-dark: #1B4332;         /* Very dark green - depth and borders */
-  
+  --primary-color: #2d5a41; /* Darker green - primary brand color */
+  --primary-light: #52b788; /* Medium green - lighter interactions */
+  --primary-dark: #1b4332; /* Very dark green - depth and borders */
+
   /* Secondary Colors */
-  --secondary-color: #FF8C00;      /* Orange - secondary actions and warnings */
-  --secondary-light: #FFA500;      /* Light orange - hover states */
-  --secondary-dark: #E67E00;       /* Dark orange - strong contrast */
-  
+  --secondary-color: #ff8c00; /* Orange - secondary actions and warnings */
+  --secondary-light: #ffa500; /* Light orange - hover states */
+  --secondary-dark: #e67e00; /* Dark orange - strong contrast */
+
   /* Accent Colors */
-  --accent-primary: #7B68EE;       /* Purple - highlights and accents */
-  --accent-secondary: #9370DB;     /* Medium purple - subtle accents */
-  
+  --accent-primary: #7b68ee; /* Purple - highlights and accents */
+  --accent-secondary: #9370db; /* Medium purple - subtle accents */
+
   /* Alert and Status Colors */
-  --success-color: #2D5A41;        /* Darker green for positive actions */
-  --warning-color: #FF8C00;        /* Orange for warnings */
-  --danger-color: #000000;         /* Black for emergencies */
-  --info-color: #7B68EE;          /* Purple for information */
-  
+  --success-color: #2d5a41; /* Darker green for positive actions */
+  --warning-color: #ff8c00; /* Orange for warnings */
+  --danger-color: #000000; /* Black for emergencies */
+  --info-color: #7b68ee; /* Purple for information */
+
   /* Neutral Colors */
-  --white: #FFFFFF;                /* Pure white - backgrounds and text */
-  --light-gray: #F8F9FA;          /* Very light gray - section backgrounds */
-  --medium-gray: #E9ECEF;         /* Light gray - borders and dividers */
-  --dark-gray: #6C757D;           /* Gray - secondary text */
-  --charcoal: #343A40;            /* Dark gray - strong text */
-  --black: #000000;               /* Pure black - primary text */
-  
+  --white: #ffffff; /* Pure white - backgrounds and text */
+  --light-gray: #f8f9fa; /* Very light gray - section backgrounds */
+  --medium-gray: #e9ecef; /* Light gray - borders and dividers */
+  --dark-gray: #6c757d; /* Gray - secondary text */
+  --charcoal: #343a40; /* Dark gray - strong text */
+  --black: #000000; /* Pure black - primary text */
+
   /* Text Colors */
-  --text-primary: #000000;        /* Black text for maximum readability */
-  --text-secondary: #343A40;      /* Dark gray for secondary text */
-  --text-muted: #6C757D;         /* Gray for subtle text */
-  --text-light: #FFFFFF;         /* White text on dark backgrounds */
-  
+  --text-primary: #000000; /* Black text for maximum readability */
+  --text-secondary: #343a40; /* Dark gray for secondary text */
+  --text-muted: #6c757d; /* Gray for subtle text */
+  --text-light: #ffffff; /* White text on dark backgrounds */
+
   /* Background Colors */
-  --bg-primary: #FFFFFF;          /* White main background */
-  --bg-secondary: #F8F9FA;        /* Light gray section backgrounds */
-  --bg-tertiary: #FFFFFF;         /* White card backgrounds */
-  
+  --bg-primary: #ffffff; /* White main background */
+  --bg-secondary: #f8f9fa; /* Light gray section backgrounds */
+  --bg-tertiary: #ffffff; /* White card backgrounds */
+
   /* Interactive Colors */
-  --link-color: #2D5A41;          /* Darker green links */
-  --link-hover: #1B4332;          /* Very dark green link hover */
-  --button-primary: #2D5A41;      /* Darker green primary buttons */
-  --button-secondary: #FF8C00;    /* Orange secondary buttons */
-  --button-outline: #7B68EE;      /* Purple outline buttons */
-  
+  --link-color: #2d5a41; /* Darker green links */
+  --link-hover: #1b4332; /* Very dark green link hover */
+  --button-primary: #2d5a41; /* Darker green primary buttons */
+  --button-secondary: #ff8c00; /* Orange secondary buttons */
+  --button-outline: #7b68ee; /* Purple outline buttons */
+
   /* Border and Shadow Colors */
-  --border-color: #E9ECEF;        /* Light gray borders */
-  --border-dark: #DEE2E6;         /* Medium gray borders */
-  --shadow-light: rgba(0, 0, 0, 0.08);    /* Light black shadow */
-  --shadow-medium: rgba(0, 0, 0, 0.16);   /* Medium black shadow */
-  --shadow-dark: rgba(0, 0, 0, 0.24);     /* Dark black shadow */
+  --border-color: #e9ecef; /* Light gray borders */
+  --border-dark: #dee2e6; /* Medium gray borders */
+  --shadow-light: rgba(0, 0, 0, 0.08); /* Light black shadow */
+  --shadow-medium: rgba(0, 0, 0, 0.16); /* Medium black shadow */
+  --shadow-dark: rgba(0, 0, 0, 0.24); /* Dark black shadow */
 }
 
 /* General styles */
@@ -81,22 +81,108 @@ h3 {
   color: var(--primary-color);
 }
 
-/* Header */
-.hero-container {
+/* Hero Section - Image on Left, Content on Right */
+.hero-section {
+  min-height: 70vh;
+  background-color: var(--bg-primary);
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  min-height: 300px;
-  font-family: "Lexend", sans-serif;
-  color: white;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
 }
 
-/* Hero Section with Dark Overlay */
+.hero-image-container {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+}
+
+.hero-content {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-title {
+  color: var(--primary-color);
+  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+}
+
+.hero-buttons .btn {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px var(--shadow-light);
+  /* Ensure consistent button sizing */
+  padding: 12px 30px !important;
+  border-radius: 8px !important;
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+  min-height: 48px !important;
+  min-width: 160px !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.hero-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow-medium);
+}
+
+/* Specific hero button styling for consistent appearance */
+.hero-buttons .btn[href="#resources"] {
+  background-color: #2D5A41 !important;
+  color: #FFFFFF !important;
+  border-color: #2D5A41 !important;
+}
+
+.hero-buttons .btn[href="#contact"] {
+  background-color: transparent !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.hero-buttons .btn[href="#contact"]:hover {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #000000 !important;
+}
+
+.hero-buttons .btn[href="#resources"]:hover {
+  background-color: #1b4332 !important;
+  color: #FFFFFF !important;
+  border-color: #1b4332 !important;
+}
+
+/* Legacy jumbotron styles - keeping for compatibility but updating */
 .jumbotron {
   position: relative;
   min-height: 70vh;
@@ -105,33 +191,20 @@ h3 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .jumbotron::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
-}
-
-.jumbotron h1 {
-  position: relative;
-  z-index: 2; /* Ensure text appears above overlay */
-  margin-bottom: 0.25rem !important; /* Reduce space below h1 */
-  text-align: center !important;
-  width: 100%;
-  display: block;
-  margin-left: auto !important;
-  margin-right: auto !important;
 }
 
 .jumbotron p.lead {
@@ -143,147 +216,399 @@ h3 {
 
 /* Navigation */
 .navbar {
-    background-color: var(--primary-color) !important;
-    box-shadow: 0 2px 4px var(--shadow-light);
-    padding: 0.5rem 0; /* Reduce top and bottom padding */
+  background-color: var(--primary-color) !important;
+  box-shadow: 0 2px 4px var(--shadow-light);
+  padding: 0.5rem 0; /* Reduce top and bottom padding */
+  transition: all 0.3s ease;
 }
 
 .navbar .container {
-    max-width: 90%; /* Make navbar content narrower */
+  max-width: 90%; /* Make navbar content narrower */
 }
 
 .navbar-nav .nav-link {
-    color: var(--text-light) !important;
-    transition: color 0.3s ease;
+  color: var(--text-light) !important;
+  transition: color 0.3s ease;
+  padding: 0.75rem 1rem;
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--accent-secondary) !important;
-    font-weight: 600;
+  color: var(--accent-secondary) !important;
+  font-weight: 600;
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--accent-secondary) !important;
+  color: var(--accent-secondary) !important;
+}
+
+/* Mobile navbar improvements */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Better mobile menu */
+@media screen and (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
 }
 
 /* Main content */
 
 /* Enhanced card styling for better readability */
 .card {
-    transition: transform 0.2s ease-in-out;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 4px var(--shadow-light);
-    display: flex;
-    flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px var(--shadow-light);
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px var(--shadow-medium);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow-medium);
+}
+
+/* Card body flexbox alignment for consistent button positioning */
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Ensure card content pushes buttons to bottom */
+.card-body > *:last-child {
+  margin-top: auto;
+}
+
+/* Button alignment within cards */
+.card .btn {
+  margin-top: auto;
+  align-self: stretch;
+  text-align: center;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specific alignment for cards with buttons at bottom */
+.card-body .btn:last-child,
+.card-body .btn.w-100 {
+  margin-top: auto;
+}
+
+/* Ensure consistent spacing above buttons in cards */
+.card-body .btn {
+  margin-top: 1rem;
+}
+
+/* Fix for cards with multiple elements before button */
+.card-body p + .btn,
+.card-body ul + .btn,
+.card-body div + .btn {
+  margin-top: 1rem;
+}
+
+/* Vertical alignment for card content */
+.card-body.text-center {
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-body.text-center > *:not(.btn) {
+  margin-bottom: 0.5rem;
+}
+
+.card-body.text-center .btn {
+  margin-top: auto;
+}
+
+/* Height consistency for cards in same row */
+.row .card {
+  height: 100%;
+}
+
+/* Flexbox for equal height card columns */
+[class*="col-"] .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure h-100 class works properly with flexbox */
+.card.h-100 {
+  height: 100% !important;
+}
+
+/* Quick Reference Guide Cards - Perfect Alignment */
+.card-body.text-center {
+  padding: 1.5rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body.text-center .fa-2x {
+  flex-shrink: 0;
+}
+
+.card-body.text-center h6 {
+  flex-shrink: 0;
+  margin: 0.75rem 0 0.5rem 0;
+}
+
+.card-body.text-center p {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+  min-height: 2.5rem;
+}
+
+.card-body.text-center .btn {
+  flex-shrink: 0;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+/* Emergency Services Cards - Button Alignment */
+.card-body .d-flex.align-items-center {
+  flex-grow: 1;
+}
+
+/* Ensure consistent button heights across all cards */
+.card .btn {
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  line-height: 1.4;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Responsive adjustments for card button alignment */
+@media screen and (max-width: 767.98px) {
+  .card-body.text-center {
+    min-height: 180px;
+    padding: 1rem;
+  }
+  
+  .card-body.text-center p {
+    min-height: 2rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .card-body.text-center {
+    min-height: 220px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-body.text-center {
+    min-height: 240px;
+  }
+}
+
+/* Specific alignment fixes for card headings and content */
+.card-title.fw-bold {
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+/* Ensure consistent card content area heights */
+.card-body.d-flex.flex-column {
+  min-height: 280px;
+}
+
+.card-body.d-flex.flex-column .card-title {
+  flex-shrink: 0;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.card-body.d-flex.flex-column .card-text.flex-grow-1 {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  min-height: 4rem;
+}
+
+.card-body.d-flex.flex-column .btn.mt-auto {
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+/* Hero buttons alignment fixes */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-buttons .btn {
+  flex: 0 0 auto;
+  min-width: 160px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-content.text-md-start .hero-buttons {
+    justify-content: flex-start;
+  }
+}
+
+/* Ensure equal height for images in cards */
+.card-img-top {
+  height: 150px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  flex-shrink: 0;
+}
+
+/* Override inline styles for better consistency */
+.card-img-top[style*="height: 90%"] {
+  height: 150px !important;
 }
 
 /* Specific card header colors */
 .card-header.bg-warning {
-    background-color: #FF8C00 !important; /* Orange for "How to Recognize Concerns" */
-    color: #000000 !important; /* Black text */
+  background-color: #ff8c00 !important; /* Orange for "How to Recognize Concerns" */
+  color: #000000 !important; /* Black text */
 }
 
 .card-header.bg-success {
-    background-color: #2D5A41 !important; /* Darker green for "How to Respond" */
-    color: #FFFFFF !important; /* White text for better contrast on darker green */
+  background-color: #2d5a41 !important; /* Darker green for "How to Respond" */
+  color: #ffffff !important; /* White text for better contrast on darker green */
 }
 
 .card-header.bg-primary {
-    background-color: #7B68EE !important; /* Purple for "Safeguarding Best Practices" */
-    color: #000000 !important; /* Black text */
+  background-color: #7b68ee !important; /* Purple for "Safeguarding Best Practices" */
+  color: #000000 !important; /* Black text */
 }
 
 .card-header.bg-danger {
-    background-color: #000000 !important; /* Black for Emergency */
-    color: #FFFFFF !important; /* White text for better contrast on black */
+  background-color: #000000 !important; /* Black for Emergency */
+  color: #ffffff !important; /* White text for better contrast on black */
 }
 
 .card-img-top {
-    height: 150px;
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-    background-color: var(--bg-secondary);
-    padding: 10px;
-}
-
-.card-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  height: 150px;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  background-color: var(--bg-secondary);
+  padding: 10px;
 }
 
 .card-title {
-    color: black;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+  color: #834e11;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 /* Alert styling improvements */
 .alert {
-    border: none;
-    font-size: 0.9rem;
-    border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 8px;
 }
 
 .alert-info {
-    background-color: #000dff;
-    color: var(--text-light);
-    border-left: 4px solid var(--secondary-dark);
+  background-color: #000dff;
+  color: var(--text-light);
+  border-left: 4px solid var(--secondary-dark);
 }
 
 .alert-warning {
-    background-color: #ff0000;
-    color: var(--text-light);
-    border-left: 4px solid var(--warning-color);
+  background-color: #ff0000;
+  color: var(--text-light);
+  border-left: 4px solid var(--warning-color);
 }
 
 .alert-success {
-    background-color: #008000;
-    color: var(--text-light);
-    border-left: 4px solid var(--success-color);
+  background-color: #008000;
+  color: var(--text-light);
+  border-left: 4px solid var(--success-color);
 }
 
 /* List styling improvements */
 .list-group-item {
-    font-size: 0.9rem;
-    line-height: 1.4;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 /* Emergency contact card styling */
 .bg-danger .card-title {
-    color: var(--text-light);
-    border-bottom-color: rgba(255,255,255,0.3);
+  color: var(--text-light);
+  border-bottom-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Quick guide section styling */
 .bg-light {
-    border: 1px solid #e9ecef;
+  border: 1px solid #e9ecef;
 }
 
 .fa-2x {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Form improvements */
 .form-label {
-    font-weight: 600;
-    color: #9932CC;
+  font-weight: 600;
+  color: #9932cc;
 }
 
 .form-text {
-    font-size: 0.85rem;
-    color: #9932CC;
+  font-size: 0.85rem;
+  color: #9932cc;
 }
 
 select.form-control {
-    padding: 0.375rem 0.75rem;
+  padding: 0.375rem 0.75rem;
 }
 
 .slider {
@@ -297,182 +622,315 @@ select.form-control {
 
 .main-text {
   position: absolute;
-  top: 50%; 
+  top: 50%;
   left: 50%;
   font-size: 100px;
   transform: translate(-50%, -50%);
   text-align: center;
 }
 
-
-
 /* Navbar */
 
 .logo {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .logo {
-    width: 30px;
-    max-height: 30px;
-    text-align: left;
+  width: 30px;
+  max-height: 30px;
+  text-align: left;
 }
 
 /* Services */
 .card-body {
-    margin-bottom: 1.5rem;
-    font-weight: bold;
-    background-color: rgb(255, 255, 255);
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Emergency contact card styling */
 .bg-danger {
-    background-color: var(--danger-color) !important;
+  background-color: var(--danger-color) !important;
 }
 
 .bg-danger .card-title {
-    color: var(--text-light);
-    border-bottom-color: rgba(255,255,255,0.3);
+  color: var(--text-light);
+  border-bottom-color: rgba(255, 255, 255, 0.3);
 }
 
 .bg-danger .card-body {
-    background-color: var(--danger-color) !important;
+  background-color: var(--danger-color) !important;
 }
 
 /* Quick guide section styling */
 .bg-light {
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
 }
 
 .fa-2x {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Text color improvements */
 .text-primary {
-    color: #6200ca !important;
+  color: #6200ca !important;
 }
 
 .text-success {
-    color: var(--success-color) !important;
+  color: var(--success-color) !important;
 }
 
 .text-muted {
-    color: var(--text-muted) !important;
+  color: var(--text-muted) !important;
 }
 
 .text-white {
-    color: var(--text-light) !important;
+  color: var(--text-light) !important;
 }
 
 /* Footer / contact */
 #contact {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding-bottom: 3rem;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding-bottom: 3rem;
 }
 
 #contact h2,
 #contact h3 {
-    color: var(--text-light);
+  color: var(--text-light);
 }
 
 #contact h5 {
-    color: var(--accent-secondary);
+  color: var(--accent-secondary);
 }
 
 #contact .sub-heading-color {
-    color: var(--accent-secondary);
+  color: var(--accent-secondary);
 }
 
 #contact i {
-    color: var(--accent-secondary);
-    font-size: 1.2rem;
-    margin-right: 15px;
+  color: var(--accent-secondary);
+  font-size: 1.2rem;
+  margin-right: 15px;
 }
 
 #contact .social-links i {
-    color: var(--text-light);
-    font-size: 1.9rem;
-    transition: color 0.3s ease-in-out;
+  color: var(--text-light);
+  font-size: 1.9rem;
+  transition: color 0.3s ease-in-out;
 }
 
 #contact .social-links i:hover {
-    color: var(--accent-secondary);
+  color: var(--accent-secondary);
 }
 
 #contact .table-dark * {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 #contact .form-label {
-    color: var(--text-light);
+  color: var(--text-light);
 }
 
 #contact .form-text {
-    color: var(--accent-secondary);
+  color: var(--accent-secondary);
 }
 
 #contact .table-dark * {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 /* Form improvements */
 .form-label {
-    font-weight: 600;
-    color: var(--text-primary);
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 .form-text {
-    font-size: 0.85rem;
-    color: var(--text-muted);
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
 
 .form-control:focus,
 .form-select:focus {
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 0.2rem rgba(93, 138, 114, 0.25);
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.2rem rgba(93, 138, 114, 0.25);
 }
 
 .form-control.is-invalid,
 .form-select.is-invalid {
-    border-color: var(--danger-color);
+  border-color: var(--danger-color);
 }
 
 .form-control.is-valid,
 .form-select.is-valid {
-    border-color: var(--success-color);
+  border-color: var(--success-color);
 }
 
 /* Button improvements */
 .custom-button-outline {
-    border: 3px solid var(--accent-primary);
-    padding: 12px 30px;
-    color: var(--text-primary);
-    background-color: var(--accent-primary);
-    transition: all 0.3s ease;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    min-width: 120px;
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 2px 4px var(--shadow-light);
+  border: 3px solid var(--accent-primary);
+  padding: 12px 30px;
+  color: var(--text-primary);
+  background-color: var(--accent-primary);
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  min-width: 120px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px var(--shadow-light);
 }
 
 .custom-button-outline:hover {
-    background-color: var(--white); /* White background on hover */
-    border-color: var(--accent-primary); /* Keep yellow border */
-    color: var(--text-primary);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px var(--shadow-medium);
+  background-color: var(--white); /* White background on hover */
+  border-color: var(--accent-primary); /* Keep yellow border */
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--shadow-medium);
 }
 
 .custom-button-outline:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* General mobile-first improvements */
+@media screen and (max-width: 991.98px) {
+  /* Improve readability on all mobile/tablet devices */
+  body {
+    line-height: 1.6;
+  }
+  
+  /* Better text selection on mobile */
+  * {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Improve tap targets */
+  a, button, .btn, .nav-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  
+  /* Better scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Prevent horizontal scroll */
+  body, html {
+    overflow-x: hidden;
+  }
+  
+  /* Better image loading */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Improve list readability */
+  ul, ol {
+    padding-left: 1.25rem;
+  }
+  
+  li {
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Better table responsiveness */
+  .table-responsive {
+    font-size: 0.85rem;
+  }
+  
+  .table td, .table th {
+    padding: 0.5rem;
+    word-wrap: break-word;
+  }
+  
+  /* Improve alert visibility */
+  .alert {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Better card spacing */
+  .card {
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Improve form accessibility */
+  .form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(45, 90, 65, 0.25);
+    border-color: var(--primary-color);
+  }
+  
+  /* Better error states */
+  .is-invalid {
+    animation: shake 0.3s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+  
+  /* Improve loading states */
+  .btn:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+  }
+  
+  /* Better focus states for accessibility */
+  *:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+  
+  /* Remove outline for mouse users */
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/* Landscape orientation optimizations */
+@media screen and (max-width: 767.98px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 100vh;
+  }
+  
+  .hero-image-container {
+    height: 100vh;
+  }
+  
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  /* Compact navigation for landscape mobile */
+  .navbar {
+    padding: 0.25rem 0;
+  }
 }
 
 /* grid visualisation CSS for testing */
@@ -489,34 +947,568 @@ select.form-control {
 
 /* Media queries */
 
+/* Mobile devices (up to 767px) */
+@media screen and (max-width: 767.98px) {
+  /* Hero Section Optimizations */
+  .hero-section {
+    min-height: auto;
+    padding-bottom: 2rem;
+  }
+  
+  .hero-image-container {
+    height: 35vh;
+    min-height: 200px;
+  }
+  
+  .hero-content {
+    padding: 1.5rem 1rem;
+    text-align: center !important;
+  }
+  
+  .hero-title {
+    font-size: 2rem !important;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  .hero-buttons .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    margin-right: 0 !important;
+    padding: 12px 20px !important;
+    font-size: 0.95rem !important;
+    min-width: 100% !important;
+    min-height: 48px !important;
+    border-width: 2px !important;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  /* Card alignment fixes for mobile */
+  .card-body.d-flex.flex-column {
+    min-height: 240px;
+  }
+  
+  .card-body.d-flex.flex-column .card-title {
+    min-height: 2.5rem;
+  }
+  
+  .card-body.d-flex.flex-column .card-text.flex-grow-1 {
+    min-height: 3rem;
+  }
+  
+  /* Navigation Optimizations */
+  .navbar {
+    padding: 0.25rem 0;
+  }
+  
+  .navbar .container {
+    max-width: 95%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .navbar-brand img {
+    width: 120px !important;
+    height: 40px !important;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  /* Card Optimizations */
+  .card {
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+    min-height: auto !important;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .card-img-top {
+    height: 120px;
+  }
+  
+  /* Typography Optimizations */
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  h6 {
+    font-size: 0.95rem;
+  }
+  
+  p, .lead {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  /* Alert Optimizations */
+  .alert {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* List Optimizations */
+  .list-group-item {
+    padding: 0.5rem 0;
+    font-size: 0.85rem;
+  }
+  
+  ul li {
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Form Optimizations */
+  .form-control, .form-select {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  
+  .form-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Button Optimizations */
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+  
+  .btn-lg {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+  
+  .custom-button-outline {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    min-width: 100px;
+  }
+  
+  /* Container and Spacing Optimizations */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  .col-12, .col-md-6, .col-lg-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  /* Footer/Contact Optimizations */
+  #contact {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  #contact h2 {
+    font-size: 1.5rem;
+  }
+  
+  #contact h3 {
+    font-size: 1.25rem;
+  }
+  
+  #contact i {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  #contact .social-links i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
+  
+  /* Table Optimizations */
+  .table {
+    font-size: 0.85rem;
+  }
+  
+  .table td, .table th {
+    padding: 0.5rem;
+  }
+  
+  /* Touch-friendly interactions */
+  .nav-link, .btn, .card, a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-link {
+    justify-content: center;
+  }
+  
+  /* Reduce margins and padding for mobile */
+  .mb-4 {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .mb-5 {
+    margin-bottom: 2rem !important;
+  }
+  
+  .py-5 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+}
+
+/* Extra small devices (under 576px) */
+@media screen and (max-width: 575.98px) {
+  /* Ultra-compact hero section */
+  .hero-section {
+    min-height: auto;
+    padding-bottom: 1rem;
+  }
+  
+  .hero-image-container {
+    height: 30vh;
+    min-height: 180px;
+  }
+  
+  .hero-content {
+    padding: 1rem 0.75rem;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem !important;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Ultra-compact navigation */
+  .navbar-brand img {
+    width: 100px !important;
+    height: 35px !important;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+  }
+  
+  /* Ultra-compact cards */
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .card-text {
+    font-size: 0.85rem;
+  }
+  
+  .card-img-top {
+    height: 100px;
+  }
+  
+  /* Ultra-compact typography */
+  h1 {
+    font-size: 1.6rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  h3 {
+    font-size: 1.15rem;
+  }
+  
+  p, .lead {
+    font-size: 0.85rem;
+  }
+  
+  /* Ultra-compact spacing */
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem !important;
+  }
+  
+  .mb-5 {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Smaller buttons for very small screens */
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .hero-buttons .btn {
+    padding: 10px 15px !important;
+    font-size: 0.9rem !important;
+    min-height: 44px !important;
+    border-width: 2px !important;
+  }
+  
+  /* Compact contact section */
+  #contact i {
+    font-size: 0.9rem;
+    margin-right: 8px;
+  }
+  
+  #contact .social-links i {
+    font-size: 1.3rem;
+    margin: 0 8px;
+  }
+}
+
+/* Small devices (576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  /* Optimizations for small devices like large phones in landscape */
+  .hero-image-container {
+    height: 35vh;
+    min-height: 220px;
+  }
+  
+  .hero-title {
+    font-size: 2.25rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .card-img-top {
+    height: 130px;
+  }
+  
+  /* Better button sizing for small tablets */
+  .hero-buttons .btn {
+    display: inline-block;
+    width: auto;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    min-height: 48px !important;
+    padding: 12px 20px !important;
+    border-width: 2px !important;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  /* Tablet-optimized hero section */
+  .hero-section {
+    min-height: 60vh;
+  }
+  
+  .hero-image-container {
+    height: 60vh;
+  }
+  
+  .hero-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .hero-title {
+    font-size: 2.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+  
+  /* Tablet-optimized cards */
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-img-top {
+    height: 140px;
+  }
+  
   /* Make all service cards the same height for consistency */
   #services .card-body {
     min-height: 191px;
+  }
+  
+  /* Better typography for tablets */
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  /* Tablet navigation improvements */
+  .navbar-brand img {
+    width: 140px !important;
+    height: 45px !important;
+  }
+  
+  /* Better button layout for tablets */
+  .hero-buttons .btn {
+    display: inline-block;
+    width: auto;
+    margin-right: 1rem;
+    margin-bottom: 0.75rem;
+    padding: 12px 24px !important;
+    min-width: 160px !important;
+    min-height: 48px !important;
+    border-width: 2px !important;
+  }
+  
+  .hero-buttons {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  /* Card alignment for tablets */
+  .card-body.d-flex.flex-column {
+    min-height: 300px;
+  }
+  
+  .card-body.d-flex.flex-column .card-title {
+    min-height: 3rem;
+  }
+  
+  .card-body.d-flex.flex-column .card-text.flex-grow-1 {
+    min-height: 4.5rem;
+  }
+  
+  /* Contact section optimizations for tablets */
+  #contact {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Form optimizations for tablets */
+  .form-control, .form-select {
+    padding: 0.75rem;
+    font-size: 1rem;
   }
 }
 
 /* Large devices (small laptops, 992px and up) */
 @media screen and (min-width: 992px) {
+  .hero-section {
+    min-height: 70vh;
+  }
+  
+  .hero-image-container {
+    height: 70vh;
+  }
+  
+  .hero-content {
+    padding: 3rem;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
   /* Make all service cards the same height for consistency */
   #services .card-body {
     min-height: auto;
+  }
+  
+  /* Hero buttons alignment for desktop */
+  .hero-buttons .btn {
+    min-width: 180px !important;
+    margin-right: 1.5rem;
+    min-height: 48px !important;
+    padding: 12px 30px !important;
+    border-width: 2px !important;
+  }
+  
+  /* Card alignment for desktop */
+  .card-body.d-flex.flex-column {
+    min-height: 320px;
+  }
+  
+  .card-body.d-flex.flex-column .card-title {
+    min-height: 3.5rem;
+  }
+  
+  .card-body.d-flex.flex-column .card-text.flex-grow-1 {
+    min-height: 5rem;
   }
 }
 
 /* xl devices (large desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
+  .hero-section {
+    min-height: 75vh;
+  }
+  
+  .hero-image-container {
+    height: 75vh;
+  }
+  
+  .hero-content {
+    padding: 4rem;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
   /* make all service cards the same height for consistency */
   #services .card-body {
     min-height: 220px;
-  }
-}
-
-/* xxl devices (larger desktops, 1400px and up) */
-@media screen and (min-width: 1400px) {
-  /* make all service cards the same height for consistency */
-  #services .card-body {
-    min-height: 195px;
   }
 }
