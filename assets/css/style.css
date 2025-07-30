@@ -129,27 +129,36 @@ h3 {
   color: var(--text-secondary);
   font-size: 1.25rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   max-width: 500px;
+}
+
+/* Hero Buttons - Consistent Sizing */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-buttons .btn {
   font-weight: 600;
   transition: all 0.3s ease;
   box-shadow: 0 2px 4px var(--shadow-light);
-  /* Ensure consistent button sizing */
-  padding: 12px 30px !important;
-  border-radius: 8px !important;
-  font-size: 1rem !important;
-  line-height: 1.5rem !important;
-  min-height: 48px !important;
-  min-width: 160px !important;
-  border-width: 2px !important;
-  border-style: solid !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+  min-height: 48px;
+  min-width: 160px;
+  border-width: 2px;
+  border-style: solid;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
 }
 
 .hero-buttons .btn:hover {
@@ -157,29 +166,27 @@ h3 {
   box-shadow: 0 4px 8px var(--shadow-medium);
 }
 
-/* Specific hero button styling for consistent appearance */
+/* Specific button styling */
 .hero-buttons .btn[href="#resources"] {
-  background-color: #2D5A41 !important;
-  color: #FFFFFF !important;
-  border-color: #2D5A41 !important;
-}
-
-.hero-buttons .btn[href="#contact"] {
-  background-color: transparent !important;
-  color: #000000 !important;
-  border-color: #000000 !important;
-}
-
-.hero-buttons .btn[href="#contact"]:hover {
-  background-color: #000000 !important;
-  color: #FFFFFF !important;
-  border-color: #000000 !important;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-color: var(--primary-color);
 }
 
 .hero-buttons .btn[href="#resources"]:hover {
-  background-color: #1b4332 !important;
-  color: #FFFFFF !important;
-  border-color: #1b4332 !important;
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.hero-buttons .btn[href="#contact"] {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+.hero-buttons .btn[href="#contact"]:hover {
+  background-color: var(--text-primary);
+  color: var(--text-light);
 }
 
 /* Legacy jumbotron styles - keeping for compatibility but updating */
@@ -218,12 +225,31 @@ h3 {
 .navbar {
   background-color: var(--primary-color) !important;
   box-shadow: 0 2px 4px var(--shadow-light);
-  padding: 0.5rem 0; /* Reduce top and bottom padding */
+  padding: 0.5rem 0;
   transition: all 0.3s ease;
 }
 
 .navbar .container {
-  max-width: 90%; /* Make navbar content narrower */
+  max-width: 90%;
+}
+
+.navbar-brand img {
+  width: 150px;
+  height: 50px;
+  object-fit: contain;
+  object-position: center;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+.navbar-brand {
+  padding: 0.25rem 0;
+  margin-right: 1rem;
 }
 
 .navbar-nav .nav-link {
@@ -241,7 +267,6 @@ h3 {
   color: var(--accent-secondary) !important;
 }
 
-/* Mobile navbar improvements */
 .navbar-toggler {
   border: none;
   padding: 0.25rem 0.5rem;
@@ -283,13 +308,17 @@ h3 {
 
 /* Main content */
 
-/* Enhanced card styling for better readability */
+/* Enhanced card styling for better readability and alignment */
 .card {
   transition: transform 0.2s ease-in-out;
   border: 1px solid var(--border-color);
   box-shadow: 0 2px 4px var(--shadow-light);
   display: flex;
   flex-direction: column;
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .card:hover {
@@ -297,20 +326,25 @@ h3 {
   box-shadow: 0 4px 8px var(--shadow-medium);
 }
 
-/* Card body flexbox alignment for consistent button positioning */
 .card-body {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  background-color: var(--bg-tertiary);
+  padding: 1.25rem;
+  overflow: hidden;
+  word-wrap: break-word;
+  box-sizing: border-box;
 }
 
-/* Ensure card content pushes buttons to bottom */
+/* Card content alignment */
 .card-body > *:last-child {
   margin-top: auto;
 }
 
-/* Button alignment within cards */
 .card .btn {
   margin-top: auto;
   align-self: stretch;
@@ -321,62 +355,70 @@ h3 {
   justify-content: center;
 }
 
-/* Specific alignment for cards with buttons at bottom */
-.card-body .btn:last-child,
-.card-body .btn.w-100 {
+/* Card images */
+.card-img-top {
+  height: 120px;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--bg-secondary);
+  padding: 8px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* Card titles */
+.card-title {
+  color: #834e11;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.card-title.fw-bold {
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  line-height: 1.3;
+}
+
+/* Specific card layouts */
+.card-body.d-flex.flex-column {
+  min-height: 200px;
+}
+
+.card-body.d-flex.flex-column .card-title {
+  flex-shrink: 0;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.card-body.d-flex.flex-column .card-text.flex-grow-1 {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  min-height: 3.5rem;
+}
+
+.card-body.d-flex.flex-column .btn.mt-auto {
   margin-top: auto;
+  flex-shrink: 0;
 }
 
-/* Ensure consistent spacing above buttons in cards */
-.card-body .btn {
-  margin-top: 1rem;
-}
-
-/* Fix for cards with multiple elements before button */
-.card-body p + .btn,
-.card-body ul + .btn,
-.card-body div + .btn {
-  margin-top: 1rem;
-}
-
-/* Vertical alignment for card content */
+/* Quick Reference Guide Cards */
 .card-body.text-center {
+  padding: 1.25rem;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   text-align: center;
-}
-
-.card-body.text-center > *:not(.btn) {
-  margin-bottom: 0.5rem;
-}
-
-.card-body.text-center .btn {
-  margin-top: auto;
-}
-
-/* Height consistency for cards in same row */
-.row .card {
-  height: 100%;
-}
-
-/* Flexbox for equal height card columns */
-[class*="col-"] .card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Ensure h-100 class works properly with flexbox */
-.card.h-100 {
-  height: 100% !important;
-}
-
-/* Quick Reference Guide Cards - Perfect Alignment */
-.card-body.text-center {
-  padding: 1.5rem;
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .card-body.text-center .fa-2x {
@@ -403,151 +445,39 @@ h3 {
   margin-bottom: 0;
 }
 
-/* Emergency Services Cards - Button Alignment */
-.card-body .d-flex.align-items-center {
-  flex-grow: 1;
-}
-
-/* Ensure consistent button heights across all cards */
-.card .btn {
-  min-height: 44px;
-  padding: 0.5rem 1rem;
-  line-height: 1.4;
-  font-size: 0.875rem;
-  font-weight: 600;
-}
-
-/* Responsive adjustments for card button alignment */
-@media screen and (max-width: 767.98px) {
-  .card-body.text-center {
-    min-height: 180px;
-    padding: 1rem;
-  }
-  
-  .card-body.text-center p {
-    min-height: 2rem;
-    font-size: 0.85rem;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .card-body.text-center {
-    min-height: 220px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .card-body.text-center {
-    min-height: 240px;
-  }
-}
-
-/* Specific alignment fixes for card headings and content */
-.card-title.fw-bold {
-  min-height: 2.5rem;
-  display: flex;
-  align-items: center;
-  line-height: 1.3;
-  margin-bottom: 1rem;
-}
-
-/* Ensure consistent card content area heights */
-.card-body.d-flex.flex-column {
-  min-height: 280px;
-}
-
-.card-body.d-flex.flex-column .card-title {
-  flex-shrink: 0;
-  min-height: 3rem;
-  display: flex;
-  align-items: center;
-}
-
-.card-body.d-flex.flex-column .card-text.flex-grow-1 {
-  flex-grow: 1;
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-  min-height: 4rem;
-}
-
-.card-body.d-flex.flex-column .btn.mt-auto {
-  margin-top: auto;
-  flex-shrink: 0;
-}
-
-/* Hero buttons alignment fixes */
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-buttons .btn {
-  flex: 0 0 auto;
-  min-width: 160px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .hero-content.text-md-start .hero-buttons {
-    justify-content: flex-start;
-  }
-}
-
-/* Ensure equal height for images in cards */
-.card-img-top {
-  height: 150px !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  flex-shrink: 0;
-}
-
-/* Override inline styles for better consistency */
-.card-img-top[style*="height: 90%"] {
-  height: 150px !important;
-}
-
 /* Specific card header colors */
 .card-header.bg-warning {
-  background-color: #ff8c00 !important; /* Orange for "How to Recognize Concerns" */
-  color: #000000 !important; /* Black text */
+  background-color: var(--warning-color) !important;
+  color: var(--text-primary) !important;
 }
 
 .card-header.bg-success {
-  background-color: #2d5a41 !important; /* Darker green for "How to Respond" */
-  color: #ffffff !important; /* White text for better contrast on darker green */
+  background-color: var(--success-color) !important;
+  color: var(--text-light) !important;
 }
 
 .card-header.bg-primary {
-  background-color: #7b68ee !important; /* Purple for "Safeguarding Best Practices" */
-  color: #000000 !important; /* Black text */
+  background-color: var(--accent-primary) !important;
+  color: var(--text-primary) !important;
 }
 
 .card-header.bg-danger {
-  background-color: #000000 !important; /* Black for Emergency */
-  color: #ffffff !important; /* White text for better contrast on black */
+  background-color: var(--danger-color) !important;
+  color: var(--text-light) !important;
 }
 
-.card-img-top {
-  height: 150px;
-  object-fit: contain;
-  object-position: center;
-  width: 100%;
-  background-color: var(--bg-secondary);
-  padding: 10px;
+/* Emergency contact card styling */
+.bg-danger {
+  background-color: var(--danger-color) !important;
 }
 
-.card-title {
-  color: #834e11;
-  border-bottom: 2px solid var(--border-color);
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+.bg-danger .card-title {
+  color: var(--text-light);
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.bg-danger .card-body {
+  background-color: var(--danger-color) !important;
 }
 
 /* Alert styling improvements */
@@ -575,104 +505,14 @@ h3 {
   border-left: 4px solid var(--success-color);
 }
 
-/* List styling improvements */
-.list-group-item {
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-/* Emergency contact card styling */
-.bg-danger .card-title {
-  color: var(--text-light);
-  border-bottom-color: rgba(255, 255, 255, 0.3);
-}
-
-/* Quick guide section styling */
-.bg-light {
-  border: 1px solid #e9ecef;
-}
-
+/* Common styles and utilities */
 .fa-2x {
   margin-bottom: 0.5rem;
 }
 
-/* Form improvements */
-.form-label {
-  font-weight: 600;
-  color: #9932cc;
-}
-
-.form-text {
-  font-size: 0.85rem;
-  color: #9932cc;
-}
-
-select.form-control {
-  padding: 0.375rem 0.75rem;
-}
-
-.slider {
-  position: relative;
-}
-
-.main_img {
-  width: 100%;
-  height: 600px;
-}
-
-.main-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 100px;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/* Navbar */
-
-.logo {
-  background-color: transparent;
-}
-
-.logo {
-  width: 30px;
-  max-height: 30px;
-  text-align: left;
-}
-
-/* Services */
-.card-body {
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-  background-color: rgb(255, 255, 255);
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Emergency contact card styling */
-.bg-danger {
-  background-color: var(--danger-color) !important;
-}
-
-.bg-danger .card-title {
-  color: var(--text-light);
-  border-bottom-color: rgba(255, 255, 255, 0.3);
-}
-
-.bg-danger .card-body {
-  background-color: var(--danger-color) !important;
-}
-
-/* Quick guide section styling */
 .bg-light {
   border: 1px solid var(--border-color);
   background-color: var(--bg-secondary);
-}
-
-.fa-2x {
-  margin-bottom: 0.5rem;
 }
 
 /* Text color improvements */
@@ -692,56 +532,278 @@ select.form-control {
   color: var(--text-light) !important;
 }
 
-/* Footer / contact */
-#contact {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  padding-bottom: 3rem;
+/* ========================================
+   RESPONSIVE BREAKPOINTS SYSTEM
+   Small: 576px+ | Medium: 768px+ | Large: 992px+ | Extra Large: 1200px+
+======================================== */
+
+/* Container and Grid Constraints */
+.container {
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
 }
 
-#contact h2,
-#contact h3 {
-  color: var(--text-light);
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-#contact h5 {
-  color: var(--accent-secondary);
+[class*="col-"] {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
-#contact .sub-heading-color {
-  color: var(--accent-secondary);
+/* Mobile-first base styles and small devices (up to 575px) */
+@media screen and (max-width: 575.98px) {
+  /* Hero Section */
+  .hero-section {
+    min-height: auto;
+    padding-bottom: 1rem;
+  }
+  
+  .hero-image-container {
+    height: 30vh;
+    min-height: 180px;
+  }
+  
+  .hero-content {
+    padding: 1rem 0.75rem;
+    text-align: center !important;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    min-width: 100%;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+  
+  /* Navigation */
+  .navbar-brand img {
+    width: 100px;
+    height: 35px;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+  }
+  
+  /* Cards */
+  .card-body {
+    padding: 1rem;
+    overflow: hidden;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .card-body.d-flex.flex-column {
+    min-height: 200px;
+  }
+  
+  .card-body.text-center {
+    min-height: 140px;
+    padding: 1rem;
+  }
+  
+  .card-img-top {
+    height: 60px;
+  }
+  
+  /* Typography */
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.15rem; }
+  p, .lead { font-size: 0.85rem; }
+  
+  /* Spacing */
+  .container { 
+    padding: 0 10px; 
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .mb-4 { margin-bottom: 1rem !important; }
+  .mb-5 { margin-bottom: 1.5rem !important; }
+  
+  /* Additional spacing for mobile */
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  #resources {
+    padding-bottom: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  footer#contact {
+    margin-top: 2rem;
+  }
 }
 
-#contact i {
-  color: var(--accent-secondary);
-  font-size: 1.2rem;
-  margin-right: 15px;
+/* Small devices (576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .hero-image-container {
+    height: 35vh;
+    min-height: 220px;
+  }
+  
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons .btn {
+    display: inline-block;
+    width: auto;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    min-height: 48px;
+    padding: 12px 20px;
+  }
+  
+  .card-img-top {
+    height: 65px;
+  }
+  
+  /* Section spacing for small devices */
+  section {
+    margin-bottom: 2.5rem;
+  }
+  
+  #resources {
+    padding-bottom: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  footer#contact {
+    margin-top: 3rem;
+  }
 }
 
-#contact .social-links i {
-  color: var(--text-light);
-  font-size: 1.9rem;
-  transition: color 0.3s ease-in-out;
-}
-
-#contact .social-links i:hover {
-  color: var(--accent-secondary);
-}
-
-#contact .table-dark * {
-  background-color: transparent;
-}
-
-#contact .form-label {
-  color: var(--text-light);
-}
-
-#contact .form-text {
-  color: var(--accent-secondary);
-}
-
-#contact .table-dark * {
-  background-color: transparent;
+/* Medium devices (768px and up) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  /* Hero Section */
+  .hero-section {
+    min-height: 60vh;
+  }
+  
+  .hero-image-container {
+    height: 60vh;
+  }
+  
+  .hero-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .hero-title {
+    font-size: 2.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .hero-buttons .btn {
+    display: inline-block;
+    width: auto;
+    margin-right: 1rem;
+    margin-bottom: 0.75rem;
+    padding: 12px 24px;
+    min-width: 160px;
+    min-height: 48px;
+  }
+  
+  .hero-content.text-md-start .hero-buttons {
+    justify-content: flex-start;
+  }
+  
+  /* Navigation */
+  .navbar-brand img {
+    width: 140px;
+    height: 45px;
+  }
+  
+  /* Cards */
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-body.d-flex.flex-column {
+    min-height: 250px;
+  }
+  
+  .card-body.d-flex.flex-column .card-title {
+    min-height: 3rem;
+  }
+  
+  .card-body.d-flex.flex-column .card-text.flex-grow-1 {
+    min-height: 4.5rem;
+  }
+  
+  .card-body.text-center {
+    min-height: 220px;
+  }
+  
+  .card-img-top {
+    height: 70px;
+  }
+  
+  /* Typography */
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  
+  /* Contact */
+  #contact {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Section spacing for medium devices */
+  section {
+    margin-bottom: 3rem;
+  }
+  
+  #resources {
+    padding-bottom: 3rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  footer#contact {
+    margin-top: 3.5rem;
+  }
 }
 
 /* Form improvements */
@@ -996,7 +1058,7 @@ select.form-control {
   
   /* Card alignment fixes for mobile */
   .card-body.d-flex.flex-column {
-    min-height: 240px;
+    min-height: 200px;
   }
   
   .card-body.d-flex.flex-column .card-title {
@@ -1033,11 +1095,15 @@ select.form-control {
   .card {
     margin-bottom: 1.5rem;
     border-radius: 12px;
+    max-width: 100%;
+    overflow: hidden;
   }
   
   .card-body {
     padding: 1.25rem;
     min-height: auto !important;
+    overflow: hidden;
+    word-wrap: break-word;
   }
   
   .card-title {
@@ -1051,10 +1117,10 @@ select.form-control {
   }
   
   .card-img-top {
-    height: 120px;
+    height: 65px;
   }
   
-  /* Typography Optimizations */
+  /* Ultra-compact typography */
   h1 {
     font-size: 1.8rem;
     line-height: 1.2;
@@ -1114,11 +1180,6 @@ select.form-control {
     border-radius: 8px;
   }
   
-  .btn-lg {
-    padding: 0.875rem 1.75rem;
-    font-size: 1rem;
-  }
-  
   .custom-button-outline {
     padding: 10px 20px;
     font-size: 0.95rem;
@@ -1129,6 +1190,8 @@ select.form-control {
   .container {
     padding-left: 15px;
     padding-right: 15px;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   
   .row {
@@ -1139,6 +1202,8 @@ select.form-control {
   .col-12, .col-md-6, .col-lg-4 {
     padding-left: 10px;
     padding-right: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   /* Footer/Contact Optimizations */
@@ -1253,7 +1318,7 @@ select.form-control {
   }
   
   .card-img-top {
-    height: 100px;
+    height: 65px;
   }
   
   /* Ultra-compact typography */
@@ -1329,7 +1394,7 @@ select.form-control {
   }
   
   .card-img-top {
-    height: 130px;
+    height: 30px;
   }
   
   /* Better button sizing for small tablets */
@@ -1373,7 +1438,7 @@ select.form-control {
   }
   
   .card-img-top {
-    height: 140px;
+    height: 30px;
   }
   
   /* Make all service cards the same height for consistency */
@@ -1419,7 +1484,7 @@ select.form-control {
   
   /* Card alignment for tablets */
   .card-body.d-flex.flex-column {
-    min-height: 300px;
+    min-height: 250px;
   }
   
   .card-body.d-flex.flex-column .card-title {
@@ -1443,8 +1508,9 @@ select.form-control {
   }
 }
 
-/* Large devices (small laptops, 992px and up) */
-@media screen and (min-width: 992px) {
+/* Large devices (992px and up) */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  /* Hero Section */
   .hero-section {
     min-height: 70vh;
   }
@@ -1454,30 +1520,33 @@ select.form-control {
   }
   
   .hero-content {
-    padding: 3rem;
+    padding: 3rem 2rem;
   }
   
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 3.25rem;
   }
   
-  /* Make all service cards the same height for consistency */
-  #services .card-body {
-    min-height: auto;
+  .hero-subtitle {
+    font-size: 1.25rem;
   }
   
-  /* Hero buttons alignment for desktop */
   .hero-buttons .btn {
-    min-width: 180px !important;
-    margin-right: 1.5rem;
-    min-height: 48px !important;
-    padding: 12px 30px !important;
-    border-width: 2px !important;
+    padding: 14px 28px;
+    min-width: 180px;
+    min-height: 52px;
+    margin-right: 1.25rem;
   }
   
-  /* Card alignment for desktop */
+  /* Navigation */
+  .navbar-brand img {
+    width: 150px;
+    height: 48px;
+  }
+  
+  /* Cards */
   .card-body.d-flex.flex-column {
-    min-height: 320px;
+    min-height: 280px;
   }
   
   .card-body.d-flex.flex-column .card-title {
@@ -1487,28 +1556,207 @@ select.form-control {
   .card-body.d-flex.flex-column .card-text.flex-grow-1 {
     min-height: 5rem;
   }
+  
+  .card-img-top {
+    height: 75px;
+  }
+  
+  /* Typography */
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.5rem; }
+  h3 { font-size: 1.75rem; }
+  
+  /* Sections */
+  .hero-section, #services, #resources, #contact {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
-/* xl devices (large desktops, 1200px and up) */
+/* Extra large devices (1200px and up) */
 @media screen and (min-width: 1200px) {
+  /* Hero Section */
   .hero-section {
-    min-height: 75vh;
+    min-height: 80vh;
   }
   
   .hero-image-container {
-    height: 75vh;
+    height: 80vh;
   }
   
   .hero-content {
-    padding: 4rem;
+    padding: 4rem 2.5rem;
   }
   
   .hero-title {
-    font-size: 4rem;
+    font-size: 3.75rem;
   }
   
-  /* make all service cards the same height for consistency */
-  #services .card-body {
-    min-height: 220px;
+  .hero-subtitle {
+    font-size: 1.4rem;
   }
+  
+  .hero-buttons .btn {
+    padding: 16px 32px;
+    min-width: 200px;
+    min-height: 56px;
+    margin-right: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Navigation */
+  .navbar-brand img {
+    width: 160px;
+    height: 50px;
+  }
+  
+  /* Cards */
+  .card-body.d-flex.flex-column {
+    min-height: 300px;
+  }
+  
+  .card-body.d-flex.flex-column .card-title {
+    min-height: 4rem;
+  }
+  
+  .card-body.d-flex.flex-column .card-text.flex-grow-1 {
+    min-height: 5.5rem;
+  }
+  
+  .card-img-top {
+    height: 80px;
+  }
+  
+  /* Typography */
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 3rem; }
+  h3 { font-size: 2rem; }
+  
+  /* Sections */
+  .hero-section, #services, #resources, #contact {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/* ========================================
+   SECTION SPACING AND LAYOUT
+======================================== */
+/* Ensure proper spacing between sections */
+section {
+  margin-bottom: 3rem;
+}
+
+#resources {
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Prevent footer overlap */
+footer#contact {
+  margin-top: 4rem;
+  clear: both;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
+   FOOTER / CONTACT SECTION
+======================================== */
+#contact {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding-bottom: 3rem;
+}
+
+#contact h2,
+#contact h3 {
+  color: var(--text-light);
+}
+
+#contact h5 {
+  color: var(--accent-secondary);
+}
+
+#contact .sub-heading-color {
+  color: var(--accent-secondary);
+}
+
+#contact i {
+  color: var(--accent-secondary);
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+#contact .social-links i {
+  color: var(--text-light);
+  font-size: 1.9rem;
+  transition: color 0.3s ease-in-out;
+}
+
+#contact .social-links i:hover {
+  color: var(--accent-secondary);
+}
+
+#contact .table-dark * {
+  background-color: transparent;
+}
+
+#contact .form-label {
+  color: var(--text-light);
+}
+
+#contact .form-text {
+  color: var(--accent-secondary);
+}
+
+/* ========================================
+   BUTTON STYLES
+======================================== */
+.btn-primary {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background-color: var(--text-dark);
+  border-color: var(--text-dark);
+  color: var(--text-light);
+}
+
+.btn-outline-primary {
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--text-dark);
+  border-color: var(--text-dark);
+  color: var(--text-light);
+}
+
+.btn-success {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn-success:hover {
+  background-color: var(--text-dark);
+  border-color: var(--text-dark);
+  color: var(--text-light);
+}
+
+.btn-danger {
+  background-color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  color: var(--text-light);
+}
+
+.btn-danger:hover {
+  background-color: var(--text-dark);
+  border-color: var(--text-dark);
+  color: var(--text-light);
 }
