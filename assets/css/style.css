@@ -99,6 +99,17 @@ img {
   height: auto;
 }
 
+.logo {
+  width: 100%; /* or max-width: 100%; */
+  height: auto;
+}
+
+
+.card-img-top.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 /* NAVIGATION STYLES */
 .navbar {
   background: var(--neutral-white);
@@ -110,6 +121,7 @@ img {
 .navbar-brand .logo {
   height: 50px;
   width: auto;
+  aspect-ratio: ;
 }
 
 .navbar-nav .nav-link {
