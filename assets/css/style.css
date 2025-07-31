@@ -445,6 +445,22 @@ footer {
   }
 }
 
+h3.mb-3 {
+  color: var(--primary-green-light);
+}
+
+h5 {
+  color: var(--primary-green-light);
+}
+
+.text {
+  color: var(--secondary-orange);
+}
+
+.form-text {
+  color: var(--neutral-white);
+}
+
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   .card {
