@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Lexend:wght@500&display=swap");
 
-/* ============================================
-   CSS VARIABLES & CORE STYLING
-   ============================================ */
+/*CSS VARIABLES & CORE STYLING */
 :root {
   /* Color Palette */
   --primary-green: #2d5a41;
@@ -38,9 +36,7 @@
   --bp-xl: 1200px;
 }
 
-/* ============================================
-   GLOBAL STYLES
-   ============================================ */
+/* GLOBAL STYLES */
 * {
   box-sizing: border-box;
 }
@@ -79,7 +75,7 @@ h2 {
 
  h4 {
   font-family: var(--font-secondary);
-  color: var(--neutral-charcoal);
+  color: var(--neutral-charcoal) var(--neutral-white);
   font-weight: 500;
   line-height: 1.2;
  }
@@ -103,9 +99,7 @@ img {
   height: auto;
 }
 
-/* ============================================
-   NAVIGATION STYLES
-   ============================================ */
+/* NAVIGATION STYLES */
 .navbar {
   background: var(--neutral-white);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -139,9 +133,7 @@ img {
   box-shadow: none;
 }
 
-/* ============================================
-   HERO SECTION
-   ============================================ */
+/* HERO SECTION */
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -176,9 +168,7 @@ img {
   margin-bottom: var(--spacing-xl);
 }
 
-/* ============================================
-   BUTTON STYLES
-   ============================================ */
+/* BUTTON STYLES */
 .btn {
   border-radius: 8px;
   padding: 12px 30px;
@@ -215,9 +205,7 @@ img {
   color: var(--neutral-white);
 }
 
-/* ============================================
-   CARD STYLES
-   ============================================ */
+/* CARD STYLES */
 .card {
   border: none;
   border-radius: 12px;
@@ -244,14 +232,12 @@ img {
   padding: var(--spacing-lg);
 }
 
-.card-title {
-  color: var(--neutral-charcoal);
+.card-title.mb-0 {
+  color: var(--neutral-white);
   margin-bottom: var(--spacing-md);
 }
 
-/* ============================================
-   UTILITY CLASSES
-   ============================================ */
+/* UTILITY CLASSES */
 .text-primary-color { color: var(--primary-green); }
 .text-secondary-color { color: var(--secondary-orange); }
 .text-accent-color { color: var(--accent-purple); }
@@ -264,9 +250,7 @@ img {
 .border-secondary-color { border-color: var(--secondary-orange); }
 .border-accent-color { border-color: var(--accent-purple); }
 
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
+/* RESPONSIVE DESIGN */
 
 /* Mobile First - Base styles for mobile */
 @media (max-width: 575.98px) {
@@ -394,11 +378,14 @@ img {
   }
 }
 
-/* ============================================
-   FORM STYLES
-   ============================================ */
+/* FORM STYLES */
+.display-6 {
+  color: var(--neutral-white);
+  margin-bottom: var(--spacing-md);
+}
+
 .form-control {
-  border: 2px solid var(--neutral-medium-gray);
+  border: 2px solid var(--neutral-white);
   border-radius: 8px;
   padding: var(--spacing-sm) var(--spacing-md);
   font-size: 1rem;
@@ -413,16 +400,14 @@ img {
 
 .form-label {
   font-weight: 500;
-  color: var(--neutral-charcoal);
+  color: white;
   margin-bottom: var(--spacing-sm);
 }
 
-/* ============================================
-   FOOTER STYLES
-   ============================================ */
+/* FOOTER STYLES */
 footer {
   background-color: var(--primary-green);
-  color: var(--neutral-white);
+  color: white;
   padding: var(--spacing-xl) 0;
   margin-top: auto;
 }
@@ -442,9 +427,7 @@ footer {
   color: var(--primary-green-light);
 }
 
-/* ============================================
-   ACCESSIBILITY & PERFORMANCE
-   ============================================ */
+/* ACCESSIBILITY & PERFORMANCE */
 /* Focus styles for accessibility */
 *:focus {
   outline: 2px solid var(--primary-green);
@@ -473,9 +456,7 @@ footer {
   }
 }
 
-/* ============================================
-   PRINT STYLES
-   ============================================ */
+/* PRINT STYLES */
 @media print {
   .navbar,
   .hero-section,
